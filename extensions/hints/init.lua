@@ -159,7 +159,7 @@ end
 
 function hints.setupModal()
   k = modal_hotkey.new(nil, nil)
-  k:bind({}, 'escape', function() hints.closeHints(); k:exit() end)
+  k:bind({}, 'escape', function() disableModal() end)
 
   for _, c in ipairs(hints.hintChars) do
     k:bind({}, c, function() hints.processChar(c) end)
