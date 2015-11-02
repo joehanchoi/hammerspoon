@@ -82,7 +82,7 @@ local logger=require'hs.logger'
 local log=logger.new'wlayout'
 local layout={} -- module and class
 layout.setLogLevel=log.setLogLevel
-
+layout.getLogLevel=log.getLogLevel
 
 local winbuf,appbuf={},{} -- action buffers for windows and apps
 local rulebuf={} -- buffer for rules to apply
@@ -320,7 +320,7 @@ local function __tostring(self) return 'hs.window.layout: '..(self.logname or '.
 function layout.new(rules,logname,loglevel)
   if type(rules)~='table' then error('rules must be a table',2)end
   local o=setmetatable({log=logname and logger.new(logname,loglevel) or log,logname=logname,loglevel=loglevel},{__index=layout,__tostring=__tostring})
-  if logname then o.setLogLevel=o.log.setLogLevel end
+  if logname then o.setLogLevel=o.log.setLogLevel o.getLogLevel=o.log.getLogLevel end
   local mt=getmetatable(rules)
   if mt and mt.__index==layout then
     o.log.i('new windowlayout copy')
@@ -417,7 +417,7 @@ local function performPendingActions()
         elseif action==MOVE then
           local frame=command.rect or toscreen:fromUnitRect(command.unitrect)
           if win:frame()~=frame then
-            if command.rect then win:setFrame(frame) else win:setFrameInScreenBounds(frame) end
+            win:setFrame(frame)
             command.log.f('rule %s: %s (%d) moved to %s',idx,appname,id,frame.string)
           end
         elseif action==NOACTION then
@@ -445,14 +445,15 @@ local function performPendingActions()
     local toscreen=findScreen(command.screen) or command[1]:screen()
     local frame=command.rect or toscreen:fromUnitRect(command.unitrect)
     command.log.f('rule %s: %s %d windows into %s by %s',idx,command.action,#command,frame.string,command.select)
-    tileWindows(command,frame,command.aspect,command.select~=CLOSEST,command.action==FIT,command.unitrect and true or nil)
+    --    tileWindows(command,frame,command.aspect,command.select~=CLOSEST,command.action==FIT)
+    tileWindows(command,frame,command.aspect,false,command.action==FIT) -- always tile by position
   end
 
   -- hide apps
   for app,command in pairs(appbuf) do
     if command.hide==true and not app:isHidden() then
       app:hide()
-      command.log.f('rule %d: %s hidden',command.idx,app:name())
+      command.log.f('rule %d.%d: %s hidden',command.irule,command.icmd,app:name())
     end
     appbuf[app]=nil
   end
@@ -741,7 +742,7 @@ end
 local function checkScreenInstances()
   -- check screenInstances, set them active appropriately
   local newActiveInstances={}
-  --  for wl in pairs(activeInstances) do prevActiveInstances[wl]=true newActiveInstances[wl]=true end
+  for wl in pairs(activeInstances) do newActiveInstances[wl]=true end
   for wl in pairs(screenInstances) do
     newActiveInstances[wl]=true
     wl.log.v('checking screen configuration')

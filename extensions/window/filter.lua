@@ -109,7 +109,7 @@ do
   local SKIP_APPS_NO_PID = {
     -- ideally, keep this updated (used in the root filter)
     -- these will be shown as a warning in the console ("No accessibility access to app ...")
-    'universalaccessd','sharingd','Safari Networking','iTunes Helper','Safari Web Content',
+    'universalaccessd','sharingd','Safari Networking', 'Spotlight Networking', 'iTunes Helper','Safari Web Content',
     'App Store Web Content', 'Safari Database Storage',
     'Google Chrome Helper','Spotify Helper',
   --  'Little Snitch Agent','Little Snitch Network Monitor', -- depends on security settings in Little Snitch
@@ -119,7 +119,7 @@ do
     -- ideally, keep this updated (used in the root filter)
     -- hs.window.filter._showCandidates() -- from the console
     'com.apple.internetaccounts', 'CoreServicesUIAgent', 'AirPlayUIAgent',
-    'com.apple.security.pboxd',
+    'com.apple.security.pboxd', 'PowerChime',
     'SystemUIServer', 'Dock', 'com.apple.dock.extra', 'storeuid',
     'Folder Actions Dispatcher', 'Keychain Circle Notification', 'Wi-Fi',
     'Image Capture Extension', 'iCloud Photos', 'System Events',
@@ -144,6 +144,7 @@ do
     -- menulets
     'Music Manager', 'Google Drive', 'Dropbox', '1Password mini', 'Colors for Hue', 'MacID',
     'CrashPlan menu bar', 'Flux', 'Jettison', 'Bartender', 'SystemPal', 'BetterSnapTool', 'Grandview', 'Radium',
+    'MenuMetersApp',
   }
 
   windowfilter.ignoreInDefaultFilter = {}
@@ -159,7 +160,7 @@ function windowfilter._showCandidates()
   for _,app in ipairs(running) do
     local appname = app:name()
     if appname and windowfilter.isGuiApp(appname) and #app:allWindows()==0
-      and not windowfilter.ignoreInDefaultFilter[appname]
+      and not windowfilter.ignoreInDefaultFilter[appname] and app:kind()>=0
       and (not apps[appname] or not next(apps[appname].windows)) then
       t[#t+1]=appname
     end
@@ -692,7 +693,7 @@ function windowfilter.new(fn,logname,loglevel)
   local o = setmetatable({filters={},events={},windows={},pending={},
     log=logname and logger.new(logname,loglevel) or log,logname=logname,loglevel=loglevel},
   {__index=WF,__tostring=__tostring})
-  if logname then o.setLogLevel=o.log.setLogLevel end
+  if logname then o.setLogLevel=o.log.setLogLevel o.getLogLevel=o.log.getLogLevel end
   if type(fn)=='function' then
     o.log.i('new windowfilter, custom function')
     o.isAppAllowed = function()return true end
@@ -1075,7 +1076,7 @@ function App:getFocused()
   local fw=self.app:focusedWindow()
   local fwid=fw and fw.id and fw:id()
   if not fwid then
-    fw=self.app:mainWindow()
+    fw=self.app:mainWindow() or self.app:allWindows()[1]
     fwid=fw and fw.id and fw:id()
   end
   if fwid then
@@ -1910,17 +1911,18 @@ function WF:delete()
 end
 
 
-local defaultwf, loglevel
+local defaultwf, defaultwfLogLevel
 function windowfilter.setLogLevel(lvl)
-  log.setLogLevel(lvl) loglevel=lvl
+  log.setLogLevel(lvl) defaultwfLogLevel=lvl
   if defaultwf then defaultwf.setLogLevel(lvl) end
   return windowfilter
 end
+windowfilter.getLogLevel=log.getLogLevel
 
 local function makeDefault()
   if not defaultwf then
     defaultwf = windowfilter.new(true,'wflt-def')
-    if loglevel then defaultwf.setLogLevel(loglevel) end
+    if defaultwfLogLevel then defaultwf.setLogLevel(defaultwfLogLevel) end
     for appname in pairs(windowfilter.ignoreInDefaultFilter) do
       defaultwf:rejectApp(appname)
     end

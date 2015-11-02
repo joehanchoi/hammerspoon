@@ -30,11 +30,11 @@ typedef struct pushNSHelpers {
   pushNSHelperFunction  func;
 } pushNSHelpers;
 
-typedef id (*tableHelperFunction) (lua_State *L, int idx) ;
-typedef struct tableHelpers {
+typedef id (*luaObjectHelperFunction) (lua_State *L, int idx) ;
+typedef struct luaObjectHelpers {
   const char          *name ;
-  tableHelperFunction func ;
-} tableHelpers ;
+  luaObjectHelperFunction func ;
+} luaObjectHelpers ;
 
 @interface LuaSkin : NSObject {
     lua_State *_L;
@@ -149,6 +149,26 @@ typedef struct tableHelpers {
  @return A Lua reference to the table created for this library to store its own references
  */
 - (int)registerLibraryWithObject:(char *)libraryName functions:(const luaL_Reg *)functions metaFunctions:(const luaL_Reg *)metaFunctions objectFunctions:(const luaL_Reg *)objectFunctions;
+
+/** Defines a Lua object with methods
+ @code
+ char *objectName = "shinyObject";
+ 
+ static const luaL_Reg myShinyObject[] = {
+ {"doThing"}, function_objectDoThing},
+ {"__gc"}, function_objectCleanup{,
+ {NULL, NULL} // Function arrays must always end with this
+ }
+ 
+ [luaSkin registerObject:objectName objectFunctions:myShinyObject];
+ @endcode
+ 
+ @note Every C function pointer must point to a function of the form: static int someFunction(lua_State *L);
+ 
+ @param objectName - A C string containing the name of this object
+ @param objectFunctions - A static array of mappings between Lua object method names and C function pointers. This provides the public API of the objects. Note that this array is also used as the metatable, so special functions (e.g. "__gc") should be included here.
+ */
+- (void)registerObject:(char *)objectName objectFunctions:(const luaL_Reg *)objectFunctions;
 
 /** Stores a reference to the object at the top of the Lua stack, in the supplied table, and pops the object off the stack
 
@@ -276,20 +296,20 @@ typedef struct tableHelpers {
 
 /** Return an NSObject containing the best representation of the lua table at the specified index.
 
- @note This method uses registerd converter functions provided by the Hammerspoon modules to convert the specified table into a recognizable NSObject.  No converters are included within the LuaSkin.  This method relies upon functions registered with the registerTableHelper:forClass: method for the conversions.
+ @note This method uses registerd converter functions provided by the Hammerspoon modules to convert the specified table into a recognizable NSObject.  No converters are included within the LuaSkin.  This method relies upon functions registered with the registerLuaObjectHelper:forClass: method for the conversions.
  @param idx - the index on lua stack which contains the table to convert.
  @param className - a string containing the class name of the NSObject type to return.  If no converter function is currently registered for this type, nil is returned.
  @returns An NSObject of the appropriate type depending upon the data on the lua stack and the functions currently registered.
  */
-- (id)tableAtIndex:(int)idx toClass:(char *)className ;
+- (id)luaObjectAtIndex:(int)idx toClass:(char *)className ;
 
-/** Register a tableAtIndex:toClass: conversion helper function for the specified class.
+/** Register a luaObjectAtIndex:toClass: conversion helper function for the specified class.
 
- @note This method registers a converter functions for use with the tableAtIndex:toClass: method for converting lua tables into NSObjects.
- @param helperFN - a function of the type 'id (*tableHelperFunction) (lua_State *L, int idx)'.
+ @note This method registers a converter functions for use with the luaObjectAtIndex:toClass: method for converting lua tables into NSObjects.
+ @param helperFN - a function of the type 'id (*luaObjectHelperFunction) (lua_State *L, int idx)'.
  @param className - a string containing the class name of the NSObject type this function can convert.
  */
-- (void)registerTableHelper:(tableHelperFunction)helperFN forClass:(char *)className ;
+- (void)registerLuaObjectHelper:(luaObjectHelperFunction)helperFN forClass:(char *)className ;
 
 /** Convert a lua geometry object (table with x,y,h, and w keys) into an NSRect
 
