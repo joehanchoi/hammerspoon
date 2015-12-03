@@ -87,7 +87,9 @@ static int pushNSImageNameTable(lua_State *L) {
 ///  * An `hs.image` object, or nil if an error occured
 static int imageFromPath(lua_State *L) {
     NSString* imagePath = lua_to_nsstring(L, 1);
-    NSImage *newImage = [[NSImage alloc] initByReferencingFile:[imagePath stringByExpandingTildeInPath]];
+    imagePath = [imagePath stringByExpandingTildeInPath];
+    imagePath = [[imagePath componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@""];
+    NSImage *newImage = [[NSImage alloc] initByReferencingFile:imagePath];
 
     if (newImage && newImage.valid) {
         [[LuaSkin shared] pushNSObject:newImage];
@@ -399,7 +401,7 @@ static int saveToFile(lua_State* L) {
     if (!tiffRep)  return luaL_error(L, "Unable to write image file: Can't create internal representation");
 
     NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:tiffRep];
-    if (!tiffRep)  return luaL_error(L, "Unable to write image file: Can't wrap internal representation");
+    if (!rep)  return luaL_error(L, "Unable to write image file: Can't wrap internal representation");
 
     NSData* fileData = [rep representationUsingType:fileType properties:@{}];
     if (!fileData) return luaL_error(L, "Unable to write image file: Can't convert internal representation");

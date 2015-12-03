@@ -912,7 +912,7 @@ end:
     return 1;
 }
 
-/// hs.audiodevice:watcherSetCallback(fn) -> hs.audiodevice
+/// hs.audiodevice:watcherCallback(fn) -> hs.audiodevice
 /// Method
 /// Sets or removes a callback function for an audio device watcher
 ///
@@ -946,9 +946,7 @@ static int audiodevice_watcherSetCallback(lua_State *L) {
 
     audiodevice_t *audioDevice = userdataToAudioDevice(L, 1);
 
-    if (audioDevice->callback != LUA_NOREF) {
-        audioDevice->callback = [skin luaUnref:refTable ref:audioDevice->callback];
-    }
+    audioDevice->callback = [skin luaUnref:refTable ref:audioDevice->callback];
 
     switch (lua_type(L, 2)) {
         case LUA_TFUNCTION:
@@ -1094,15 +1092,12 @@ static int audiodevice_eq(lua_State* L) {
 }
 
 static int audiodevice_gc(lua_State* L) {
-    NSLog(@"audiodevice_gc");
     LuaSkin *skin = [LuaSkin shared];
     audiodevice_t *audioDevice = userdataToAudioDevice(L, 1);
 
     audiodevice_watcherStop(L);
 
-    if (audioDevice->callback != LUA_NOREF && audioDevice->callback != LUA_REFNIL) {
-        audioDevice->callback = [skin luaUnref:refTable ref:audioDevice->callback];
-    }
+    audioDevice->callback = [skin luaUnref:refTable ref:audioDevice->callback];
 
     return 0;
 }

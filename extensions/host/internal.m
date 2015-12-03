@@ -451,6 +451,74 @@ static int hs_globallyUniqueString(lua_State* L) {
     return 1;
 }
 
+/// hs.host.volumeInformation([showHidden]) -> table
+/// Function
+/// Returns a table of information about disk volumes attached to the system
+///
+/// Parameters:
+///  * showHidden - An optional boolean, true to show hidden volumes, false to not show hidden volumes. Defaults to false.
+///
+/// Returns:
+///  * A table of information, where the keys are the paths of disk volumes
+///
+/// Notes:
+///  * The possible keys in the table are:
+///   * NSURLVolumeTotalCapacityKey - Size of the volume in bytes
+///   * NSURLVolumeAvailableCapacityKey - Available space on the volume in bytes
+///   * NSURLVolumeIsAutomountedKey - Boolean indicating if the volume was automounted
+///   * NSURLVolumeIsBrowsableKey - Boolean indicating if the volume can be browsed
+///   * NSURLVolumeIsEjectableKey - Boolean indicating if the volume can be ejected
+///   * NSURLVolumeIsInternalKey - Boolean indicating if the volume is an internal drive or an external drive
+///   * NSURLVolumeIsLocalKey - Boolean indicating if the volume is a local or remote drive
+///   * NSURLVolumeIsReadOnlyKey - Boolean indicating if the volume is read only
+///   * NSURLVolumeIsRemovableKey - Boolean indicating if the volume is removable
+///   * NSURLVolumeMaximumFileSizeKey - Maximum file size the volume can support, in bytes
+///   * NSURLVolumeUUIDStringKey - The UUID of volume's filesystem
+///   * NSURLVolumeURLForRemountingKey - For remote volumes, the network URL of the volume
+///   * NSURLVolumeLocalizedNameKey - Localized version of the volume's name
+///   * NSURLVolumeNameKey - The volume's name
+///   * NSURLVolumeLocalizedFormatDescriptionKey - Localized description of the volume
+/// * Not all keys will be present for all volumes
+static int hs_volumeInformation(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
+    [skin checkArgs:LS_TBOOLEAN|LS_TOPTIONAL, LS_TBREAK];
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSMutableDictionary *volumeInfo = [[NSMutableDictionary alloc] init];
+
+    NSArray *urlResourceKeys = @[NSURLVolumeTotalCapacityKey,
+                                 NSURLVolumeAvailableCapacityKey,
+                                 NSURLVolumeIsAutomountedKey,
+                                 NSURLVolumeIsBrowsableKey,
+                                 NSURLVolumeIsEjectableKey,
+                                 NSURLVolumeIsInternalKey,
+                                 NSURLVolumeIsLocalKey,
+                                 NSURLVolumeIsReadOnlyKey,
+                                 NSURLVolumeIsRemovableKey,
+                                 NSURLVolumeMaximumFileSizeKey,
+                                 NSURLVolumeUUIDStringKey,
+                                 NSURLVolumeURLForRemountingKey,
+                                 NSURLVolumeLocalizedNameKey,
+                                 NSURLVolumeNameKey,
+                                 NSURLVolumeLocalizedFormatDescriptionKey
+                                 ];
+
+    NSVolumeEnumerationOptions options = NSVolumeEnumerationSkipHiddenVolumes;
+
+    if (lua_type(L, 1) == LUA_TBOOLEAN && lua_toboolean(L, 1)) {
+        options = 0;
+    }
+
+    NSArray *URLs = [fileManager mountedVolumeURLsIncludingResourceValuesForKeys:urlResourceKeys options:options];
+
+    for (NSURL *url in URLs) {
+        [volumeInfo setObject:[url resourceValuesForKeys:urlResourceKeys error:nil] forKey:[url path]];
+    }
+
+    [skin pushNSObject:volumeInfo];
+
+    return 1;
+}
 
 static const luaL_Reg hostlib[] = {
     {"addresses",                    hostAddresses},
@@ -463,6 +531,7 @@ static const luaL_Reg hostlib[] = {
     {"interfaceStyle",               hs_interfaceStyle},
     {"uuid",                         hs_uuid},
     {"globallyUniqueString",         hs_globallyUniqueString},
+    {"volumeInformation",            hs_volumeInformation},
 
     {NULL, NULL}
 };

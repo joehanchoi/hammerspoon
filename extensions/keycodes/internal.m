@@ -198,12 +198,24 @@ int keycodes_cachemap(lua_State* L) {
                                              selector:@selector(_inputSourceChanged:)
                                                  name:NSTextInputContextKeyboardSelectionDidChangeNotification
                                                object:nil];
+    /* This should have made things better, but it seems to cause crashes for some, possibly because the paired removeObserver call is wrong?
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                        selector:@selector(_inputSourceChanged:)
+                                                            name:(__bridge NSString *)kTISNotifySelectedKeyboardInputSourceChanged
+                                                          object:nil
+                                              suspensionBehavior:NSNotificationSuspensionBehaviorDeliverImmediately];
+     */
 }
 
 - (void) stop {
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSTextInputContextKeyboardSelectionDidChangeNotification
                                                   object:nil];
+    /*
+    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self
+                                                               name:(__bridge NSString *)kTISNotifyEnabledKeyboardInputSourcesChanged
+                                                             object:nil];
+     */
 }
 
 @end
@@ -251,6 +263,89 @@ static int keycodes_callback_stop(lua_State* L) {
     return 0;
 }
 
+NSString *getLayoutName(TISInputSourceRef layout) {
+    return (__bridge NSString *)TISGetInputSourceProperty(layout, kTISPropertyLocalizedName);
+}
+
+CFArrayRef getAllLayouts() {
+    return TISCreateInputSourceList((__bridge CFDictionaryRef)@{(__bridge NSString *)kTISPropertyInputSourceType : (__bridge NSString *)kTISTypeKeyboardLayout}, false);
+}
+
+/// hs.keycodes.currentLayout() -> string
+/// Function
+/// Gets the name of the current keyboard layout
+///
+/// Parameters:
+///  * None
+///
+/// Returns:
+///  * A string containing the name of the current keyboard layout
+static int keycodes_currentLayout(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
+    TISInputSourceRef layout = TISCopyCurrentKeyboardLayoutInputSource();
+
+    CFRelease(layout);
+
+    [skin pushNSObject:getLayoutName(layout)];
+    return 1;
+}
+
+/// hs.keycodes.layouts() -> table
+/// Function
+/// Gets all of the enabled keyboard layouts
+///
+/// Parameters:
+///  * None
+///
+/// Returns:
+///  * A table containing a list of keyboard layouts enabled in System Preferences
+static int keycodes_layouts(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
+    NSMutableArray *layouts = [[NSMutableArray alloc] init];
+    CFArrayRef layoutRefs = getAllLayouts();
+
+    for (int i = 0; i < CFArrayGetCount(layoutRefs); i++) {
+        TISInputSourceRef layout = (TISInputSourceRef)(CFArrayGetValueAtIndex(layoutRefs, i));
+        [layouts addObject:getLayoutName(layout)];
+    }
+
+    CFRelease(layoutRefs);
+
+    [skin pushNSObject:layouts];
+    return 1;
+}
+
+/// hs.keycodes.setLayout(layoutName) -> boolean
+/// Function
+/// Changes the system keyboard layout
+///
+/// Parameters:
+///  * layoutName - A string containing the name of an enabled keyboard layout
+///
+/// Returns:
+///  * A boolean, true if the layout was successfully changed, otherwise false
+static int keycodes_setLayout(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
+    [skin checkArgs:LS_TSTRING, LS_TBREAK];
+    NSString *desiredLayout = [skin toNSObjectAtIndex:1];
+    CFArrayRef layoutRefs = getAllLayouts();
+    BOOL found = NO;
+
+    for (int i = 0; i < CFArrayGetCount(layoutRefs); i++) {
+        TISInputSourceRef layout = (TISInputSourceRef)(CFArrayGetValueAtIndex(layoutRefs, i));
+        NSString *layoutName = getLayoutName(layout);
+
+        if ([layoutName isEqualToString:desiredLayout] && TISSelectInputSource(layout) == noErr) {
+            found = YES;
+        }
+    }
+
+    CFRelease(layoutRefs);
+
+    lua_pushboolean(L, found);
+    return 1;
+}
+
 static const luaL_Reg callbacklib[] = {
     // instance methods
     {"_stop", keycodes_callback_stop},
@@ -266,6 +361,9 @@ static const luaL_Reg keycodeslib[] = {
     // module methods
     {"_newcallback", keycodes_newcallback},
     {"_cachemap", keycodes_cachemap},
+    {"currentLayout", keycodes_currentLayout},
+    {"layouts", keycodes_layouts},
+    {"setLayout", keycodes_setLayout},
 
     {NULL, NULL}
 };

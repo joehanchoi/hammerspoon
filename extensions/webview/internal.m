@@ -1747,12 +1747,13 @@ static int userdata_gc(lua_State* L) {
     HSWebViewView   *theView   = theWindow.contentView ;
 
     if (theWindow) {
+        LuaSkin *skin = [LuaSkin shared];
         [theWindow close] ;
 
-        theWindow.udRef            = [[LuaSkin shared] luaUnref:refTable ref:theWindow.udRef] ;
-        theWindow.hsDrawingUDRef   = [[LuaSkin shared] luaUnref:refTable ref:theWindow.hsDrawingUDRef] ;
-        theView.navigationCallback = [[LuaSkin shared] luaUnref:refTable ref:theView.navigationCallback] ;
-        theView.policyCallback     = [[LuaSkin shared] luaUnref:refTable ref:theView.policyCallback] ;
+        theWindow.udRef            = [skin luaUnref:refTable ref:theWindow.udRef] ;
+        theWindow.hsDrawingUDRef   = [skin luaUnref:refTable ref:theWindow.hsDrawingUDRef] ;
+        theView.navigationCallback = [skin luaUnref:refTable ref:theView.navigationCallback] ;
+        theView.policyCallback     = [skin luaUnref:refTable ref:theView.policyCallback] ;
 
         // emancipate us from our parent
         if (theWindow.parent) {
@@ -1769,10 +1770,10 @@ static int userdata_gc(lua_State* L) {
         theView = nil ;
         theWindow = nil;
     }
-
-// Clear the pointer so it's no longer dangling
-    void** windowPtr = lua_touserdata(L, 1);
-    *windowPtr = nil ;
+// I think this may be too aggressive... removing the metatable is sufficient to make sure lua doesn't use it again
+// // Clear the pointer so it's no longer dangling
+//     void** windowPtr = lua_touserdata(L, 1);
+//     *windowPtr = nil ;
 
 // Remove the Metatable so future use of the variable in Lua won't think its valid
     lua_pushnil(L) ;

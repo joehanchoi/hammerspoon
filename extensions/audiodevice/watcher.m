@@ -27,7 +27,7 @@ const AudioObjectPropertySelector watchSelectors[] = {
 };
 
 int refTable;
-audiodevice_watcher *theWatcher;
+audiodevice_watcher *theWatcher = nil;
 
 #pragma mark - Function definitions
 
@@ -83,9 +83,13 @@ static int audiodevicewatcher_setCallback(lua_State *L) {
     LuaSkin *skin = [LuaSkin shared];
     [skin checkArgs:LS_TFUNCTION|LS_TNIL, LS_TBREAK];
 
-    if (theWatcher->callback != LUA_NOREF) {
-        theWatcher->callback = [skin luaUnref:refTable ref:theWatcher->callback];
+    if (!theWatcher) {
+        theWatcher = lua_newuserdata(L, sizeof(audiodevice_watcher));
+        theWatcher->running = NO;
+        theWatcher->callback = LUA_NOREF;
     }
+
+    theWatcher->callback = [skin luaUnref:refTable ref:theWatcher->callback];
 
     switch (lua_type(L, 1)) {
         case LUA_TFUNCTION:
@@ -114,7 +118,7 @@ static int audiodevicewatcher_setCallback(lua_State *L) {
 /// Returns:
 ///  * None
 static int audiodevicewatcher_start(lua_State *L) {
-    if (theWatcher->callback == LUA_NOREF) {
+    if (!theWatcher || theWatcher->callback == LUA_NOREF) {
         showError(L, "ERROR: hs.audiodevice.watcher.setCallback() must be used before .start()");
         return 0;
     }
@@ -143,7 +147,7 @@ static int audiodevicewatcher_start(lua_State *L) {
 
 /// hs.audiodevice.watcher.stop() -> hs.audiodevice.watcher
 /// Function
-/// Stops an audio device watcher
+/// Stops the audio device watcher
 ///
 /// Parameters:
 ///  * None
@@ -151,7 +155,7 @@ static int audiodevicewatcher_start(lua_State *L) {
 /// Returns:
 ///  * The `hs.audiodevice.watcher` object
 static int audiodevicewatcher_stop(lua_State *L) {
-    if (theWatcher->running == NO) {
+    if (!theWatcher || theWatcher->running == NO) {
         return 0;
     }
 
@@ -190,9 +194,10 @@ static int audiodevicewatcher_isRunning(lua_State *L) {
 static int audiodevicewatcher_gc(lua_State *L) {
     LuaSkin *skin = [LuaSkin shared];
 
-    audiodevicewatcher_stop(L);
-    if (theWatcher->callback != LUA_NOREF && theWatcher->callback != LUA_REFNIL) {
+    if (theWatcher) {
+        audiodevicewatcher_stop(L);
         theWatcher->callback = [skin luaUnref:refTable ref:theWatcher->callback];
+        theWatcher = nil;
     }
 
     return 0;
@@ -218,12 +223,6 @@ static const luaL_Reg metaLib[] = {
 
 int luaopen_hs_audiodevice_watcher(lua_State* L) {
     LuaSkin *skin = [LuaSkin shared];
-
-    theWatcher = lua_newuserdata(L, sizeof(audiodevice_watcher));
-    theWatcher->running = NO;
-    theWatcher->callback = LUA_NOREF;
-
     refTable = [skin registerLibrary:audiodevicewatcherLib metaFunctions:metaLib];
-
     return 1;
 }
