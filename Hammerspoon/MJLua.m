@@ -5,26 +5,62 @@
 #import "MJAccessibilityUtils.h"
 #import "variables.h"
 #import <pthread.h>
-#import "../extensions/hammerspoon.h"
 #import "MJMenuIcon.h"
 #import "MJPreferencesWindowController.h"
 #import "MJConsoleWindowController.h"
 #import "MJAutoLaunch.h"
+#import <Crashlytics/Crashlytics.h>
 
 static LuaSkin* MJLuaState;
+static MJLuaLogger* MJLuaLogDelegate;
 static int evalfn;
+
+static lua_CFunction oldPanicFunction ;
+
 int refTable;
-
-/// === hs ===
-///
-/// Core Hammerspoon functionality
-
-pthread_t mainthreadid;
 
 static void(^loghandler)(NSString* str);
 void MJLuaSetupLogHandler(void(^blk)(NSString* str)) {
     loghandler = blk;
 }
+
+@implementation MJLuaLogger
+
+@synthesize L = _L ;
+
+- (instancetype)initWithLua:(lua_State *)L {
+    self = [super init] ;
+    if (self) {
+        _L = L ;
+    }
+    return self ;
+}
+
+- (void) logForLuaSkinAtLevel:(int)level withMessage:(NSString *)theMessage {
+    // Send logs to the appropriate location, depending on their level
+    // Note that hs.handleLogMessage also does this kind of filtering. We are special casing here for LS_LOG_BREADCRUMB to entirely bypass calling into Lua
+    // (because such logs don't need to be shown to the user, just stored in our crashlog in case we crash)
+    switch (level) {
+        case LS_LOG_BREADCRUMB:
+            CLSNSLog(@"%@", theMessage);
+            break;
+
+        default:
+            lua_getglobal(_L, "hs") ; lua_getfield(_L, -1, "handleLogMessage") ; lua_remove(_L, -2) ;
+            lua_pushinteger(_L, level) ;
+            lua_pushstring(_L, [theMessage UTF8String]) ;
+            int errState = lua_pcall(_L, 2, 0, 0) ;
+            if (errState != LUA_OK) {
+                NSArray *stateLabels = @[ @"OK", @"YIELD", @"ERRRUN", @"ERRSYNTAX", @"ERRMEM", @"ERRGCMM", @"ERRERR" ] ;
+                CLSNSLog(@"logForLuaSkin: error, state %@: %s", [stateLabels objectAtIndex:(NSUInteger)errState],
+                          luaL_tolstring(_L, -1, NULL)) ;
+                lua_pop(_L, 2) ; // lua_pcall result + converted version from luaL_tolstring
+            }
+            break;
+    }
+}
+
+@end
 
 /// hs.autoLaunch([state]) -> bool
 /// Function
@@ -114,14 +150,13 @@ static int core_openconsole(lua_State* L) {
 /// Reloads your init-file in a fresh Lua environment.
 static int core_reload(lua_State* L) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[LuaSkin shared] resetLuaState];
-        MJLuaSetup();
+        MJLuaReplace();
     });
     return 0;
 }
 
 /// hs.processInfo
-/// Variable
+/// Constant
 /// A table containing read-only information about the Hammerspoon application instance currently running.
 static int push_hammerAppInfo(lua_State* L) {
     lua_newtable(L) ;
@@ -177,9 +212,12 @@ static int core_accessibilityState(lua_State* L) {
 /// Notes:
 ///  * If you are running a non-release or locally compiled version of Hammerspoon then the results of this function are unspecified.
 static int automaticallyChecksForUpdates(lua_State *L) {
+    LuaSkin *skin = [LuaSkin shared];
     if (NSClassFromString(@"SUUpdater")) {
         NSString *frameworkPath = [[[NSBundle mainBundle] privateFrameworksPath] stringByAppendingPathComponent:@"Sparkle.framework"];
         if ([[NSBundle bundleWithPath:frameworkPath] load]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
             id sharedUpdater = [NSClassFromString(@"SUUpdater")  performSelector:@selector(sharedUpdater)] ;
             if (lua_isboolean(L, 1)) {
 
@@ -200,12 +238,13 @@ static int automaticallyChecksForUpdates(lua_State *L) {
 
             }
             lua_pushboolean(L, (BOOL)[sharedUpdater performSelector:@selector(automaticallyChecksForUpdates)]) ;
+#pragma clang diagnostic pop
         } else {
-            printToConsole(L, "-- Sparkle Update framework not available for the running instance of Hammerspoon.") ;
+            [skin logWarn:@"Sparkle Update framework not available for the running instance of Hammerspoon."] ;
             lua_pushboolean(L, NO) ;
         }
     } else {
-        printToConsole(L, "-- Sparkle Update framework not available for the running instance of Hammerspoon.") ;
+        [skin logWarn:@"Sparkle Update framework not available for the running instance of Hammerspoon."] ;
         lua_pushboolean(L, NO) ;
     }
     return 1 ;
@@ -224,17 +263,21 @@ static int automaticallyChecksForUpdates(lua_State *L) {
 /// Notes:
 ///  * If you are running a non-release or locally compiled version of Hammerspoon then the results of this function are unspecified.
 static int checkForUpdates(lua_State *L) {
+    LuaSkin *skin = [LuaSkin shared];
     if (NSClassFromString(@"SUUpdater")) {
         NSString *frameworkPath = [[[NSBundle mainBundle] privateFrameworksPath] stringByAppendingPathComponent:@"Sparkle.framework"];
         if ([[NSBundle bundleWithPath:frameworkPath] load]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
             id sharedUpdater = [NSClassFromString(@"SUUpdater")  performSelector:@selector(sharedUpdater)] ;
 
             [sharedUpdater performSelector:@selector(checkForUpdates:) withObject:nil] ;
+#pragma clang diagnostic pop
         } else {
-            printToConsole(L, "-- Sparkle Update framework not available for the running instance of Hammerspoon.") ;
+            [skin logWarn:@"Sparkle Update framework not available for the running instance of Hammerspoon."] ;
         }
     } else {
-        printToConsole(L, "-- Sparkle Update framework not available for the running instance of Hammerspoon.") ;
+        [skin logWarn:@"Sparkle Update framework not available for the running instance of Hammerspoon."] ;
     }
     return 0 ;
 }
@@ -276,46 +319,16 @@ static int core_getObjectMetatable(lua_State *L) {
 ///  * This function does not modify the original string - to actually replace it, assign the result of this function to the original string.
 ///  * This function is a more specifically targeted version of the `hs.utf8.fixUTF8(...)` function.
 static int core_cleanUTF8(lua_State *L) {
-    luaL_checktype(L, 1, LUA_TSTRING) ;
-    size_t sourceLength ;
-    unsigned char *src  = (unsigned char *)lua_tolstring(L, 1, &sourceLength) ;
-    NSMutableData *dest = [[NSMutableData alloc] init] ;
-
-    unsigned char nullChar[]    = { 0xE2, 0x88, 0x85 } ;
-    unsigned char invalidChar[] = { 0xEF, 0xBF, 0xBD } ;
-
-    size_t pos = 0 ;
-    while (pos < sourceLength) {
-        if (src[pos] > 0 && src[pos] <= 127) {
-            [dest appendBytes:(void *)(src + pos) length:1] ; pos++ ;
-        } else if ((src[pos] >= 194 && src[pos] <= 223) && (src[pos+1] >= 128 && src[pos+1] <= 191)) {
-            [dest appendBytes:(void *)(src + pos) length:2] ; pos = pos + 2 ;
-        } else if ((src[pos] == 224 && (src[pos+1] >= 160 && src[pos+1] <= 191) && (src[pos+2] >= 128 && src[pos+2] <= 191)) ||
-                   ((src[pos] >= 225 && src[pos] <= 236) && (src[pos+1] >= 128 && src[pos+1] <= 191) && (src[pos+2] >= 128 && src[pos+2] <= 191)) ||
-                   (src[pos] == 237 && (src[pos+1] >= 128 && src[pos+1] <= 159) && (src[pos+2] >= 128 && src[pos+2] <= 191)) ||
-                   ((src[pos] >= 238 && src[pos] <= 239) && (src[pos+1] >= 128 && src[pos+1] <= 191) && (src[pos+2] >= 128 && src[pos+2] <= 191))) {
-            [dest appendBytes:(void *)(src + pos) length:3] ; pos = pos + 3 ;
-        } else if ((src[pos] == 240 && (src[pos+1] >= 144 && src[pos+1] <= 191) && (src[pos+2] >= 128 && src[pos+2] <= 191) && (src[pos+3] >= 128 && src[pos+3] <= 191)) ||
-                   ((src[pos] >= 241 && src[pos] <= 243) && (src[pos+1] >= 128 && src[pos+1] <= 191) && (src[pos+2] >= 128 && src[pos+2] <= 191) && (src[pos+3] >= 128 && src[pos+3] <= 191)) ||
-                   (src[pos] == 244 && (src[pos+1] >= 128 && src[pos+1] <= 143) && (src[pos+2] >= 128 && src[pos+2] <= 191) && (src[pos+3] >= 128 && src[pos+3] <= 191))) {
-            [dest appendBytes:(void *)(src + pos) length:4] ; pos = pos + 4 ;
-        } else {
-            if (src[pos] == 0)
-                [dest appendBytes:(void *)nullChar length:3] ;
-            else
-                [dest appendBytes:(void *)invalidChar length:3] ;
-            pos = pos + 1 ;
-        }
-    }
-
-    NSString *destStr = [[NSString alloc] initWithData:dest encoding:NSUTF8StringEncoding] ;
-    lua_pushlstring(L, [destStr UTF8String], [destStr lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + 1) ;
+    LuaSkin *skin = [LuaSkin shared] ;
+    [skin checkArgs:LS_TANY, LS_TBREAK] ;
+    [skin pushNSObject:[skin getValidUTF8AtIndex:1]] ;
     return 1 ;
 }
 
 static int core_exit(lua_State* L) {
-    if (lua_toboolean(L, 2))
-        lua_close(L);
+    if (lua_toboolean(L, 2)) {
+        MJLuaDestroy();
+    }
 
     [[NSApplication sharedApplication] terminate: nil];
     return 0; // lol
@@ -364,9 +377,50 @@ static luaL_Reg corelib[] = {
     {NULL, NULL}
 };
 
-void MJLuaSetup(void) {
-    mainthreadid = pthread_self();
-    MJLuaState = [LuaSkin shared];
+#pragma mark - Lua environment lifecycle, high level
+
+// Create and configure a Lua environment
+void MJLuaCreate(void) {
+    MJLuaAlloc();
+    MJLuaInit();
+}
+
+// Deconfigure and destroy a Lua environment
+void MJLuaDestroy(void) {
+    MJLuaDeinit();
+    MJLuaDealloc();
+}
+
+// Deconfigure and destroy a Lua environment and create its replacement
+void MJLuaReplace(void) {
+    MJLuaDeinit();
+    MJLuaDealloc();
+    MJLuaAlloc();
+    MJLuaInit();
+}
+
+# pragma mark - Lua environment lifecycle, low level
+
+static int MJLuaAtPanic(lua_State *L) {
+    CLSNSLog(@"LUA_AT_PANIC: %s", lua_tostring(L, -1)) ;
+    if (oldPanicFunction)
+        return oldPanicFunction(L) ;
+    else
+        return 0 ;
+}
+
+// Create a Lua environment with LuaSkin
+void MJLuaAlloc(void) {
+    LuaSkin *skin = [LuaSkin shared];
+    if (!skin.L) {
+        [skin createLuaState];
+    }
+    MJLuaState = skin;
+    oldPanicFunction = lua_atpanic([skin L], &MJLuaAtPanic) ;
+}
+
+// Configure a Lua environment that has already been created by LuaSkin
+void MJLuaInit(void) {
     lua_State* L = MJLuaState.L;
 
     refTable = [MJLuaState registerLibrary:corelib metaFunctions:nil];
@@ -397,10 +451,36 @@ void MJLuaSetup(void) {
     lua_pcall(L, 7, 1, 0);
 
     evalfn = [MJLuaState luaRef:refTable];
+    MJLuaLogDelegate = [[MJLuaLogger alloc] initWithLua:L] ;
+    if (MJLuaLogDelegate) [MJLuaState setDelegate:MJLuaLogDelegate] ;
 }
 
-void MJLuaTeardown(void) {
-    [MJLuaState destroyLuaState];
+static int callShutdownCallback(lua_State *L) {
+    lua_getglobal(L, "hs");
+    lua_getfield(L, -1, "shutdownCallback");
+
+    if (lua_type(L, -1) == LUA_TFUNCTION) {
+        [MJLuaState protectedCallAndTraceback:0 nresults:0];
+    }
+
+    return 0;
+}
+
+// Deconfigure a Lua environment that will shortly be destroyed by LuaSkin
+void MJLuaDeinit(void) {
+    LuaSkin *skin = MJLuaState;
+
+    callShutdownCallback(skin.L);
+    if (MJLuaLogDelegate) {
+        [MJLuaState setDelegate:nil] ;
+        MJLuaLogDelegate = nil ;
+    }
+}
+
+// Destroy a Lua environment with LuaSiin
+void MJLuaDealloc(void) {
+    LuaSkin *skin = MJLuaState;
+    [skin destroyLuaState];
 }
 
 NSString* MJLuaRunString(NSString* command) {
@@ -408,17 +488,16 @@ NSString* MJLuaRunString(NSString* command) {
 
     [MJLuaState pushLuaRef:refTable ref:evalfn];
     if (!lua_isfunction(L, -1)) {
-        CLS_NSLOG(@"ERROR: MJLuaRunString doesn't seem to have an evalfn");
+        CLSNSLog(@"ERROR: MJLuaRunString doesn't seem to have an evalfn");
         if (lua_isstring(L, -1)) {
-            CLS_NSLOG(@"evalfn appears to be a string: %s", lua_tostring(L, -1));
+            CLSNSLog(@"evalfn appears to be a string: %s", lua_tostring(L, -1));
         }
         return @"";
     }
     lua_pushstring(L, [command UTF8String]);
     if ([MJLuaState protectedCallAndTraceback:1 nresults:1] == NO) {
         const char *errorMsg = lua_tostring(L, -1);
-        CLS_NSLOG(@"%s", errorMsg);
-        showError(L, (char *)errorMsg);
+        [MJLuaState logError:[NSString stringWithUTF8String:errorMsg]];
     }
 
     size_t len;

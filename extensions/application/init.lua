@@ -50,7 +50,6 @@ end
 --- hs.application:name()
 --- Method
 --- Alias for `hs.application:title()`
-application.name=application.title
 
 --- hs.application.get(hint) -> hs.application object
 --- Constructor
@@ -188,8 +187,9 @@ end
 
 do
   local mt=getmetatable(application)
-  if not mt.__call then mt.__call=function(t,...)if t.find then return t.find(...) else error('cannot call uielement',2) end end end
+  -- whoever gets it first (window vs application)
+  if not mt.__call then mt.__call=function(t,...) return t.find(...) end end
 end
---getmetatable(application).__call=function(_,...)return application.find(...)end
+
 return application
 

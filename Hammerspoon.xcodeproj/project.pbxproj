@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0676071C32C0B30088C57C /* HSChooserCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0676051C32C0B30088C57C /* HSChooserCell.h */; };
+		4F0676081C32C0B30088C57C /* HSChooserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0676061C32C0B30088C57C /* HSChooserCell.m */; };
 		4F0F97571ADE9F8600F2A199 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		4F1CF8DB1A47F5BD001C8AE7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1CF8DA1A47F5BD001C8AE7 /* Crashlytics.framework */; };
+		4F20B52C1C1F1C5B00F52437 /* Hammerspoon_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F20B52B1C1F1C5B00F52437 /* Hammerspoon_UITests.m */; };
+		4F20B5341C1F225300F52437 /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4F20B5331C1F225300F52437 /* init.lua */; };
+		4F29C2371C29E0A300B8A69D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
+		4F29C2381C29E0A300B8A69D /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		4F29C23E1C29E0E700B8A69D /* volume.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29C2311C29D8E400B8A69D /* volume.m */; };
+		4F29C23F1C29E10100B8A69D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
+		4F3D9D031C3302CB0082E864 /* HSChooser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3D9D011C3302CB0082E864 /* HSChooser.h */; };
+		4F3D9D041C3302CB0082E864 /* HSChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D9D021C3302CB0082E864 /* HSChooser.m */; };
+		4F3D9D071C3314570082E864 /* HSChooserWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3D9D051C3314570082E864 /* HSChooserWindow.h */; };
+		4F3D9D081C3314570082E864 /* HSChooserWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D9D061C3314570082E864 /* HSChooserWindow.m */; };
+		4F3D9D0B1C34773E0082E864 /* HSChooserTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3D9D091C34773E0082E864 /* HSChooserTableView.h */; };
+		4F3D9D0C1C34773E0082E864 /* HSChooserTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3D9D0A1C34773E0082E864 /* HSChooserTableView.m */; };
 		4F4CB38B1B737953000EA9B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
 		4F4CB38C1B737953000EA9B6 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		4F4CB3951B737A5B000EA9B6 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4CB3941B737A5B000EA9B6 /* internal.m */; };
@@ -56,6 +70,11 @@
 		4F4CB4561B73B0D5000EA9B6 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4CB4551B73B0D5000EA9B6 /* internal.m */; };
 		4F4CB4571B73B15F000EA9B6 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA1119083251002568BB /* AppKit.framework */; };
 		4F4CB4581B73B1B1000EA9B6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
+		4F5134581C2F315C00EFD6D4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
+		4F5134591C2F315C00EFD6D4 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		4F51345F1C2F317800EFD6D4 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5134511C2EE08F00EFD6D4 /* internal.m */; };
+		4F5134601C2F318300EFD6D4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
+		4F5134641C30819000EFD6D4 /* chooser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5134631C30819000EFD6D4 /* chooser.h */; };
 		4F6345EA1B7789E30053B024 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		4F6345EB1B7795AA0053B024 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		4F64D8BF1B724C4B00FC4C65 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F64D8BE1B724C4B00FC4C65 /* internal.m */; };
@@ -123,6 +142,13 @@
 		4F70EEE31B7273700025A7B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
 		4F70EEE41B7273700025A7B3 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		4F70EEEF1B7273B00025A7B3 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F70EEEE1B7273B00025A7B3 /* internal.m */; };
+		4F766E5A1C48F79C007B9D24 /* copy_extensions_to_bundle.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E571C48F79C007B9D24 /* copy_extensions_to_bundle.sh */; };
+		4F766E5B1C48F79C007B9D24 /* librelease.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E581C48F79C007B9D24 /* librelease.sh */; };
+		4F766E5C1C48F79C007B9D24 /* release.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E591C48F79C007B9D24 /* release.sh */; };
+		4F766E611C48F7BE007B9D24 /* gencomments in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E5D1C48F7BE007B9D24 /* gencomments */; };
+		4F766E621C48F7BE007B9D24 /* genhtml in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E5E1C48F7BE007B9D24 /* genhtml */; };
+		4F766E631C48F7BE007B9D24 /* genjson in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E5F1C48F7BE007B9D24 /* genjson */; };
+		4F766E641C48F7BE007B9D24 /* gensql in Resources */ = {isa = PBXBuildFile; fileRef = 4F766E601C48F7BE007B9D24 /* gensql */; };
 		4F7694481B74C8AD00536DE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		4F7694491B74C8B800536DE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		4F76944E1B74C96800536DE4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
@@ -258,7 +284,6 @@
 		4FDE05E91B734EE600E9E8EE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
 		4FDE05EA1B734EE600E9E8EE /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		4FDE05F21B734F0100E9E8EE /* watcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE05F11B734F0100E9E8EE /* watcher.m */; };
-		4FDE05F91B7370E100E9E8EE /* hammerspoon.h in Resources */ = {isa = PBXBuildFile; fileRef = 4F9850801B722C6C00F7E909 /* hammerspoon.h */; };
 		4FEF59431B29A352002344A7 /* HSGrowingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF59421B29A352002344A7 /* HSGrowingTextField.m */; };
 		9409203119A5940600B9964E /* MJVersionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9409203019A5940600B9964E /* MJVersionUtils.m */; };
 		9422ACBD19B6163800F06A90 /* MJConfigUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422ACBC19B6163800F06A90 /* MJConfigUtils.m */; };
@@ -283,6 +308,7 @@
 		949CDC001990759B00906CCE /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 949CDBFF1990759B00906CCE /* ConsoleWindow.xib */; };
 		94A1E5481993AC5C003AEB26 /* MJFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A1E5471993AC5C003AEB26 /* MJFileUtils.m */; };
 		94ABF0901980B5E900FA68E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ABF08E1980B41300FA68E9 /* Security.framework */; };
+		AA79D2504522AC7FD944753C /* libPods-Hammerspoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87010C0F3DDC1CD8B3C95BA2 /* libPods-Hammerspoon.a */; };
 		D02F95291A00221C00E28BB2 /* Hammerspoon_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02F95281A00221C00E28BB2 /* Hammerspoon_Tests.m */; };
 		D02F95341A003A2900E28BB2 /* init.lua in Resources */ = {isa = PBXBuildFile; fileRef = D02F95331A003A2900E28BB2 /* init.lua */; };
 		D077B5BF1A001B5300369B30 /* variables.m in Sources */ = {isa = PBXBuildFile; fileRef = D077B5BE1A001B5300369B30 /* variables.m */; };
@@ -302,6 +328,12 @@
 		D64B03401BA954780006C468 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		D64B03421BA954780006C468 /* webview.h in Headers */ = {isa = PBXBuildFile; fileRef = D64B03361BA9541E0006C468 /* webview.h */; };
 		D64B03471BA954A20006C468 /* usercontent.m in Sources */ = {isa = PBXBuildFile; fileRef = D64B03381BA954660006C468 /* usercontent.m */; };
+		D6BB4FB31C16959C000DC0A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
+		D6BB4FB41C16959C000DC0A2 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		D6BB4FBA1C1695BF000DC0A2 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB4FA81C169539000DC0A2 /* internal.m */; };
+		D6BB4FC11C1695EC000DC0A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
+		D6BB4FC21C1695EC000DC0A2 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		D6BB4FC81C169605000DC0A2 /* listener.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BB4FA91C169539000DC0A2 /* listener.m */; };
 		D6F310D81BDF0E1700045CCD /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F97561ADE9F8600F2A199 /* Fabric.framework */; };
 		D6F310D91BDF0E1700045CCD /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBE2D131B72635400407788 /* Carbon.framework */; };
 		D6F310DA1BDF0E1700045CCD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
@@ -315,10 +347,23 @@
 		D6FD56891C0422B400BAE238 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
 		D6FD568A1C0422B400BAE238 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		D6FD56901C0422DE00BAE238 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FD56821C04228800BAE238 /* internal.m */; };
-		FEC002E365542A867EA8EACF /* libPods-Hammerspoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C7223738140A6F91A8338 /* libPods-Hammerspoon.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4F20B52E1C1F1C5B00F52437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9445CA0A19083251002568BB;
+			remoteInfo = Hammerspoon;
+		};
+		4F29C2401C29E13500B8A69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F29C2331C29E0A300B8A69D;
+			remoteInfo = fsvolume;
+		};
 		4F4CB3971B737A7C000EA9B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9445CA0319083251002568BB /* Project object */;
@@ -388,6 +433,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4F4CB4461B73B09C000EA9B6;
 			remoteInfo = image;
+		};
+		4F5134611C2F31A000EFD6D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F5134541C2F315C00EFD6D4;
+			remoteInfo = chooser;
 		};
 		4F6B3EA91B73D70100B2A4DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -711,6 +763,20 @@
 			remoteGlobalIDString = D6F310E51BDF110500045CCD;
 			remoteInfo = styledtext;
 		};
+		D6BB4FC91C16965C000DC0A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6BB4FAE1C16959C000DC0A2;
+			remoteInfo = speech;
+		};
+		D6BB4FCB1C16965C000DC0A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6BB4FBB1C1695EC000DC0A2;
+			remoteInfo = speechlistener;
+		};
 		D6FD56911C04230200BAE238 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9445CA0319083251002568BB /* Project object */;
@@ -733,9 +799,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		273C7223738140A6F91A8338 /* libPods-Hammerspoon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hammerspoon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B5A52CAF8760B10C86C2D0 /* Pods-Hammerspoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hammerspoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon.release.xcconfig"; sourceTree = "<group>"; };
+		1A11170BCF0BA210FA17BF37 /* Pods-Hammerspoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hammerspoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon.debug.xcconfig"; sourceTree = "<group>"; };
+		4F0676041C32AED90088C57C /* HSChooserWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HSChooserWindow.xib; path = extensions/chooser/HSChooserWindow.xib; sourceTree = "<group>"; };
+		4F0676051C32C0B30088C57C /* HSChooserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSChooserCell.h; path = extensions/chooser/HSChooserCell.h; sourceTree = "<group>"; };
+		4F0676061C32C0B30088C57C /* HSChooserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSChooserCell.m; path = extensions/chooser/HSChooserCell.m; sourceTree = "<group>"; };
 		4F0F97561ADE9F8600F2A199 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		4F1CF8DA1A47F5BD001C8AE7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4F20B5291C1F1C5B00F52437 /* Hammerspoon UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hammerspoon UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F20B52B1C1F1C5B00F52437 /* Hammerspoon_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hammerspoon_UITests.m; sourceTree = "<group>"; };
+		4F20B52D1C1F1C5B00F52437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F20B5331C1F225300F52437 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		4F29C2311C29D8E400B8A69D /* volume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = volume.m; path = extensions/fs/volume.m; sourceTree = "<group>"; };
+		4F29C23D1C29E0A300B8A69D /* libfsvolume.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libfsvolume.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3D9D011C3302CB0082E864 /* HSChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSChooser.h; path = extensions/chooser/HSChooser.h; sourceTree = "<group>"; };
+		4F3D9D021C3302CB0082E864 /* HSChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSChooser.m; path = extensions/chooser/HSChooser.m; sourceTree = "<group>"; };
+		4F3D9D051C3314570082E864 /* HSChooserWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSChooserWindow.h; path = extensions/chooser/HSChooserWindow.h; sourceTree = "<group>"; };
+		4F3D9D061C3314570082E864 /* HSChooserWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSChooserWindow.m; path = extensions/chooser/HSChooserWindow.m; sourceTree = "<group>"; };
+		4F3D9D091C34773E0082E864 /* HSChooserTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSChooserTableView.h; path = extensions/chooser/HSChooserTableView.h; sourceTree = "<group>"; };
+		4F3D9D0A1C34773E0082E864 /* HSChooserTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSChooserTableView.m; path = extensions/chooser/HSChooserTableView.m; sourceTree = "<group>"; };
 		4F4CB3911B737953000EA9B6 /* libcrash.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcrash.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4CB3931B737A5B000EA9B6 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/crash/init.lua; sourceTree = "<group>"; };
 		4F4CB3941B737A5B000EA9B6 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/crash/internal.m; sourceTree = "<group>"; };
@@ -771,8 +853,14 @@
 		4F4CB4541B73B0D5000EA9B6 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/image/init.lua; sourceTree = "<group>"; };
 		4F4CB4551B73B0D5000EA9B6 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/image/internal.m; sourceTree = "<group>"; };
 		4F5050311B97A7B9009E2B14 /* MJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppDelegate.h; sourceTree = "<group>"; };
+		4F5134501C2EE08F00EFD6D4 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/chooser/init.lua; sourceTree = "<group>"; };
+		4F5134511C2EE08F00EFD6D4 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/chooser/internal.m; sourceTree = "<group>"; };
+		4F51345E1C2F315C00EFD6D4 /* libchooser.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libchooser.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5134631C30819000EFD6D4 /* chooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chooser.h; sourceTree = "<group>"; };
 		4F64D8BD1B724C4B00FC4C65 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/alert/init.lua; sourceTree = "<group>"; };
 		4F64D8BE1B724C4B00FC4C65 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/alert/internal.m; sourceTree = "<group>"; };
+		4F6689E01C2852B500E48AF1 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/_coresetup/init.lua; sourceTree = "<group>"; };
+		4F6689E31C288BAA00E48AF1 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/redshift/init.lua; sourceTree = "<group>"; };
 		4F6B3E9B1B73D60000B2A4DE /* init.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = init.lua; path = extensions/inspect/init.lua; sourceTree = "<group>"; };
 		4F6B3E9D1B73D6A500B2A4DE /* init.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = init.lua; path = extensions/itunes/init.lua; sourceTree = "<group>"; };
 		4F6B3EA81B73D6D300B2A4DE /* libjson.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libjson.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -824,6 +912,13 @@
 		4F70EEE91B7273700025A7B3 /* libbase64.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libbase64.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F70EEED1B7273B00025A7B3 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/base64/init.lua; sourceTree = "<group>"; };
 		4F70EEEE1B7273B00025A7B3 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/base64/internal.m; sourceTree = "<group>"; };
+		4F766E571C48F79C007B9D24 /* copy_extensions_to_bundle.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = copy_extensions_to_bundle.sh; path = scripts/copy_extensions_to_bundle.sh; sourceTree = "<group>"; };
+		4F766E581C48F79C007B9D24 /* librelease.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = librelease.sh; path = scripts/librelease.sh; sourceTree = "<group>"; };
+		4F766E591C48F79C007B9D24 /* release.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = release.sh; path = scripts/release.sh; sourceTree = "<group>"; };
+		4F766E5D1C48F7BE007B9D24 /* gencomments */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gencomments; path = scripts/docs/bin/gencomments; sourceTree = "<group>"; };
+		4F766E5E1C48F7BE007B9D24 /* genhtml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = genhtml; path = scripts/docs/bin/genhtml; sourceTree = "<group>"; };
+		4F766E5F1C48F7BE007B9D24 /* genjson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = genjson; path = scripts/docs/bin/genjson; sourceTree = "<group>"; };
+		4F766E601C48F7BE007B9D24 /* gensql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gensql; path = scripts/docs/bin/gensql; sourceTree = "<group>"; };
 		4F7694541B74C96800536DE4 /* libkeycodes.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libkeycodes.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7694581B74C9CA00536DE4 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/keycodes/init.lua; sourceTree = "<group>"; };
 		4F7694591B74C9CA00536DE4 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/keycodes/internal.m; sourceTree = "<group>"; };
@@ -831,7 +926,6 @@
 		4F9797B51BECD9AD00719F3F /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/task/init.lua; sourceTree = "<group>"; };
 		4F9797B61BECD9AD00719F3F /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/task/internal.m; sourceTree = "<group>"; };
 		4F9797C31BED0AC800719F3F /* libtask.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtask.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F9850801B722C6C00F7E909 /* hammerspoon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hammerspoon.h; path = extensions/hammerspoon.h; sourceTree = "<group>"; };
 		4F9850E11B722C8100F7E909 /* libalert.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libalert.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9850E81B722CBF00F7E909 /* LuaSkin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LuaSkin.framework; path = "../../../Library/Developer/Xcode/DerivedData/Hammerspoon-bcanpjyjcsxqcveiabevaoqikpya/Build/Products/Debug/LuaSkin.framework"; sourceTree = "<group>"; };
 		4F9F02B91B3D9568009C32E5 /* LuaSkin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LuaSkin.framework; path = build/Hammerspoon/Build/Products/Debug/LuaSkin.framework; sourceTree = "<group>"; };
@@ -920,7 +1014,7 @@
 		4FEABA561BC7ABF8005E2CFB /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/expose/init.lua; sourceTree = "<group>"; };
 		4FEF59411B29A352002344A7 /* HSGrowingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGrowingTextField.h; sourceTree = "<group>"; };
 		4FEF59421B29A352002344A7 /* HSGrowingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGrowingTextField.m; sourceTree = "<group>"; };
-		896F5840119EB0EC98527200 /* Pods-Hammerspoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hammerspoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon.release.xcconfig"; sourceTree = "<group>"; };
+		87010C0F3DDC1CD8B3C95BA2 /* libPods-Hammerspoon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hammerspoon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9409202F19A5940600B9964E /* MJVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJVersionUtils.h; sourceTree = "<group>"; };
 		9409203019A5940600B9964E /* MJVersionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJVersionUtils.m; sourceTree = "<group>"; };
 		942050C41990940000FC4839 /* MJLua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJLua.h; sourceTree = "<group>"; };
@@ -964,7 +1058,6 @@
 		94A1E5471993AC5C003AEB26 /* MJFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFileUtils.m; sourceTree = "<group>"; };
 		94ABF08E1980B41300FA68E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		94BF76E51993418C001BDA77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A72912922777E1D082D08222 /* Pods-Hammerspoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hammerspoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon.debug.xcconfig"; sourceTree = "<group>"; };
 		D02F95241A00221C00E28BB2 /* Hammerspoon Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hammerspoon Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02F95271A00221C00E28BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02F95281A00221C00E28BB2 /* Hammerspoon_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hammerspoon_Tests.m; sourceTree = "<group>"; };
@@ -980,6 +1073,11 @@
 		D64B03361BA9541E0006C468 /* webview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = webview.h; path = extensions/webview/webview.h; sourceTree = "<group>"; };
 		D64B03381BA954660006C468 /* usercontent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = usercontent.m; path = extensions/webview/usercontent.m; sourceTree = "<group>"; };
 		D64B03461BA954780006C468 /* libwebviewusercontent.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libwebviewusercontent.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BB4FA71C169539000DC0A2 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/speech/init.lua; sourceTree = "<group>"; };
+		D6BB4FA81C169539000DC0A2 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/speech/internal.m; sourceTree = "<group>"; };
+		D6BB4FA91C169539000DC0A2 /* listener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = listener.m; path = extensions/speech/listener.m; sourceTree = "<group>"; };
+		D6BB4FB91C16959C000DC0A2 /* libspeech.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libspeech.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BB4FC71C1695EC000DC0A2 /* libspeechlistener.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libspeechlistener.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F310CC1BDF0DCC00045CCD /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/drawing/color/init.lua; sourceTree = "<group>"; };
 		D6F310CD1BDF0DCC00045CCD /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/drawing/color/internal.m; sourceTree = "<group>"; };
 		D6F310D01BDF0E0000045CCD /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/styledtext/init.lua; sourceTree = "<group>"; };
@@ -993,6 +1091,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F20B5261C1F1C5B00F52437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F29C2361C29E0A300B8A69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F29C23F1C29E10100B8A69D /* Fabric.framework in Frameworks */,
+				4F29C2371C29E0A300B8A69D /* Cocoa.framework in Frameworks */,
+				4F29C2381C29E0A300B8A69D /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F4CB38A1B737953000EA9B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1096,6 +1211,16 @@
 				4F4CB4571B73B15F000EA9B6 /* AppKit.framework in Frameworks */,
 				4F4CB44A1B73B09C000EA9B6 /* Cocoa.framework in Frameworks */,
 				4F4CB44B1B73B09C000EA9B6 /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F5134571C2F315C00EFD6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5134601C2F318300EFD6D4 /* Fabric.framework in Frameworks */,
+				4F5134581C2F315C00EFD6D4 /* Cocoa.framework in Frameworks */,
+				4F5134591C2F315C00EFD6D4 /* LuaSkin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1543,7 +1668,7 @@
 				9473A75D1959F9AB0080C329 /* WebKit.framework in Frameworks */,
 				9445CA0F19083251002568BB /* Cocoa.framework in Frameworks */,
 				4F9F02BB1B3D9591009C32E5 /* LuaSkin.framework in Frameworks */,
-				FEC002E365542A867EA8EACF /* libPods-Hammerspoon.a in Frameworks */,
+				AA79D2504522AC7FD944753C /* libPods-Hammerspoon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1584,6 +1709,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6BB4FB11C16959C000DC0A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6BB4FB31C16959C000DC0A2 /* Cocoa.framework in Frameworks */,
+				D6BB4FB41C16959C000DC0A2 /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6BB4FBE1C1695EC000DC0A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6BB4FC11C1695EC000DC0A2 /* Cocoa.framework in Frameworks */,
+				D6BB4FC21C1695EC000DC0A2 /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F310D71BDF0E1700045CCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1616,6 +1759,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F20B52A1C1F1C5B00F52437 /* Hammerspoon UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4F20B52B1C1F1C5B00F52437 /* Hammerspoon_UITests.m */,
+				4F20B52D1C1F1C5B00F52437 /* Info.plist */,
+				4F20B5331C1F225300F52437 /* init.lua */,
+			);
+			name = "Hammerspoon UI Tests";
+			path = HammerspoonUITests;
+			sourceTree = "<group>";
+		};
 		4F4CB3921B7379D3000EA9B6 /* crash */ = {
 			isa = PBXGroup;
 			children = (
@@ -1656,6 +1810,7 @@
 		4F4CB3CF1B7391C3000EA9B6 /* fs */ = {
 			isa = PBXGroup;
 			children = (
+				4F29C2311C29D8E400B8A69D /* volume.m */,
 				4F4CB3D01B7391D3000EA9B6 /* init.lua */,
 				4F4CB3D11B7391D3000EA9B6 /* internal.m */,
 				4F4CB3D21B7391D3000EA9B6 /* lfs.h */,
@@ -1733,6 +1888,25 @@
 			name = image;
 			sourceTree = "<group>";
 		};
+		4F51344F1C2EE07700EFD6D4 /* chooser */ = {
+			isa = PBXGroup;
+			children = (
+				4F5134501C2EE08F00EFD6D4 /* init.lua */,
+				4F5134511C2EE08F00EFD6D4 /* internal.m */,
+				4F5134631C30819000EFD6D4 /* chooser.h */,
+				4F0676041C32AED90088C57C /* HSChooserWindow.xib */,
+				4F0676051C32C0B30088C57C /* HSChooserCell.h */,
+				4F0676061C32C0B30088C57C /* HSChooserCell.m */,
+				4F3D9D011C3302CB0082E864 /* HSChooser.h */,
+				4F3D9D021C3302CB0082E864 /* HSChooser.m */,
+				4F3D9D051C3314570082E864 /* HSChooserWindow.h */,
+				4F3D9D061C3314570082E864 /* HSChooserWindow.m */,
+				4F3D9D091C34773E0082E864 /* HSChooserTableView.h */,
+				4F3D9D0A1C34773E0082E864 /* HSChooserTableView.m */,
+			);
+			name = chooser;
+			sourceTree = "<group>";
+		};
 		4F64D8BC1B724C3A00FC4C65 /* alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -1740,6 +1914,22 @@
 				4F64D8BE1B724C4B00FC4C65 /* internal.m */,
 			);
 			name = alert;
+			sourceTree = "<group>";
+		};
+		4F6689DF1C2852A100E48AF1 /* _coresetup */ = {
+			isa = PBXGroup;
+			children = (
+				4F6689E01C2852B500E48AF1 /* init.lua */,
+			);
+			name = _coresetup;
+			sourceTree = "<group>";
+		};
+		4F6689E21C288B8900E48AF1 /* redshift */ = {
+			isa = PBXGroup;
+			children = (
+				4F6689E31C288BAA00E48AF1 /* init.lua */,
+			);
+			name = redshift;
 			sourceTree = "<group>";
 		};
 		4F6B3E9A1B73D5F300B2A4DE /* inspect */ = {
@@ -1923,6 +2113,28 @@
 			name = base64;
 			sourceTree = "<group>";
 		};
+		4F766E561C48F789007B9D24 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				4F766E651C48F7C2007B9D24 /* API documentation generators */,
+				4F766E571C48F79C007B9D24 /* copy_extensions_to_bundle.sh */,
+				4F766E581C48F79C007B9D24 /* librelease.sh */,
+				4F766E591C48F79C007B9D24 /* release.sh */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		4F766E651C48F7C2007B9D24 /* API documentation generators */ = {
+			isa = PBXGroup;
+			children = (
+				4F766E5D1C48F7BE007B9D24 /* gencomments */,
+				4F766E5E1C48F7BE007B9D24 /* genhtml */,
+				4F766E5F1C48F7BE007B9D24 /* genjson */,
+				4F766E601C48F7BE007B9D24 /* gensql */,
+			);
+			name = "API documentation generators";
+			sourceTree = "<group>";
+		};
 		4F7694571B74C9B400536DE4 /* keycodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1944,7 +2156,7 @@
 		4F98506D1B722C4100F7E909 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4F9850801B722C6C00F7E909 /* hammerspoon.h */,
+				4F6689DF1C2852A100E48AF1 /* _coresetup */,
 				4F64D8BC1B724C3A00FC4C65 /* alert */,
 				4FDE05F71B73568E00E9E8EE /* appfinder */,
 				4FBE2CE31B72542600407788 /* applescript */,
@@ -1958,6 +2170,7 @@
 				4FDE05C81B72C23400E9E8EE /* brightness */,
 				4FDE05DD1B734EB400E9E8EE /* caffeinate */,
 				4FDE05F01B734EF300E9E8EE /* caffeinatewatcher */,
+				4F51344F1C2EE07700EFD6D4 /* chooser */,
 				D6FD56801C04226C00BAE238 /* console */,
 				4F4CB3921B7379D3000EA9B6 /* crash */,
 				4FD0ABC91B74B1B000A82496 /* doc */,
@@ -1994,12 +2207,15 @@
 				4F6B3F0F1B73E9BA00B2A4DE /* notify */,
 				4F6B3F241B73EBF000B2A4DE /* pasteboard */,
 				4F6B3F361B73EE0E00B2A4DE /* pathwatcher */,
+				4F6689E21C288B8900E48AF1 /* redshift */,
 				4F6B3F471B73EF8A00B2A4DE /* screen */,
 				4F6B3F561B73EFD700B2A4DE /* screenwatcher */,
 				4F6B3F6D1B73F15A00B2A4DE /* settings */,
 				4F6B3F7F1B73F48500B2A4DE /* sound */,
 				4FD0AB201B74855700A82496 /* spaces */,
 				4FD0AB221B74856B00A82496 /* spaceswatcher */,
+				D6BB4FA61C169500000DC0A2 /* speech */,
+				D6BB4FAD1C169565000DC0A2 /* speechlistener */,
 				4F6B3F851B73F86200B2A4DE /* spotify */,
 				D6F310CB1BDF0DA300045CCD /* styledtext */,
 				4FD0AB281B74862600A82496 /* tabs */,
@@ -2286,6 +2502,15 @@
 			name = expose;
 			sourceTree = "<group>";
 		};
+		9355653F3195B4626B60867A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A11170BCF0BA210FA17BF37 /* Pods-Hammerspoon.debug.xcconfig */,
+				19B5A52CAF8760B10C86C2D0 /* Pods-Hammerspoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		942050C219907AF700FC4839 /* Console Window */ = {
 			isa = PBXGroup;
 			children = (
@@ -2314,10 +2539,12 @@
 				4FC09F7B19F99ECE007542A6 /* docs.json */,
 				9445CA1419083251002568BB /* Hammerspoon */,
 				4F98506D1B722C4100F7E909 /* extensions */,
+				4F766E561C48F789007B9D24 /* scripts */,
 				D02F95251A00221C00E28BB2 /* Hammerspoon Tests */,
+				4F20B52A1C1F1C5B00F52437 /* Hammerspoon UI Tests */,
 				9445CA0D19083251002568BB /* Frameworks */,
 				9445CA0C19083251002568BB /* Products */,
-				F812A89A8B0CD6807ABA21B6 /* Pods */,
+				9355653F3195B4626B60867A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2382,6 +2609,11 @@
 				D64208921BE3CDA500673724 /* libjavascript.dylib */,
 				4F9797C31BED0AC800719F3F /* libtask.dylib */,
 				D6FD568F1C0422B400BAE238 /* libconsole.dylib */,
+				D6BB4FB91C16959C000DC0A2 /* libspeech.dylib */,
+				D6BB4FC71C1695EC000DC0A2 /* libspeechlistener.dylib */,
+				4F20B5291C1F1C5B00F52437 /* Hammerspoon UI Tests.xctest */,
+				4F29C23D1C29E0A300B8A69D /* libfsvolume.dylib */,
+				4F51345E1C2F315C00EFD6D4 /* libchooser.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2409,7 +2641,7 @@
 				94735C2F196DC4FE002A258D /* CoreFoundation.framework */,
 				94BF76E51993418C001BDA77 /* Foundation.framework */,
 				9445CA1019083251002568BB /* Other Frameworks */,
-				273C7223738140A6F91A8338 /* libPods-Hammerspoon.a */,
+				87010C0F3DDC1CD8B3C95BA2 /* libPods-Hammerspoon.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2531,6 +2763,23 @@
 			name = webviewusercontent;
 			sourceTree = "<group>";
 		};
+		D6BB4FA61C169500000DC0A2 /* speech */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB4FA71C169539000DC0A2 /* init.lua */,
+				D6BB4FA81C169539000DC0A2 /* internal.m */,
+			);
+			name = speech;
+			sourceTree = "<group>";
+		};
+		D6BB4FAD1C169565000DC0A2 /* speechlistener */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB4FA91C169539000DC0A2 /* listener.m */,
+			);
+			name = speechlistener;
+			sourceTree = "<group>";
+		};
 		D6F310CA1BDF0D9600045CCD /* color */ = {
 			isa = PBXGroup;
 			children = (
@@ -2558,18 +2807,16 @@
 			name = console;
 			sourceTree = "<group>";
 		};
-		F812A89A8B0CD6807ABA21B6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A72912922777E1D082D08222 /* Pods-Hammerspoon.debug.xcconfig */,
-				896F5840119EB0EC98527200 /* Pods-Hammerspoon.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4F29C2391C29E0A300B8A69D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F4CB38D1B737953000EA9B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2639,6 +2886,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F51345A1C2F315C00EFD6D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3D9D071C3314570082E864 /* HSChooserWindow.h in Headers */,
+				4F3D9D0B1C34773E0082E864 /* HSChooserTableView.h in Headers */,
+				4F5134641C30819000EFD6D4 /* chooser.h in Headers */,
+				4F0676071C32C0B30088C57C /* HSChooserCell.h in Headers */,
+				4F3D9D031C3302CB0082E864 /* HSChooser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2945,6 +3204,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6BB4FB51C16959C000DC0A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6BB4FC31C1695EC000DC0A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F310DC1BDF0E1700045CCD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2970,6 +3243,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4F20B5281C1F1C5B00F52437 /* Hammerspoon UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F20B5301C1F1C5B00F52437 /* Build configuration list for PBXNativeTarget "Hammerspoon UI Tests" */;
+			buildPhases = (
+				4F20B5251C1F1C5B00F52437 /* Sources */,
+				4F20B5261C1F1C5B00F52437 /* Frameworks */,
+				4F20B5271C1F1C5B00F52437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F20B52F1C1F1C5B00F52437 /* PBXTargetDependency */,
+			);
+			name = "Hammerspoon UI Tests";
+			productName = HammerspoonUITests;
+			productReference = 4F20B5291C1F1C5B00F52437 /* Hammerspoon UI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4F29C2331C29E0A300B8A69D /* fsvolume */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F29C23A1C29E0A300B8A69D /* Build configuration list for PBXNativeTarget "fsvolume" */;
+			buildPhases = (
+				4F29C2341C29E0A300B8A69D /* Sources */,
+				4F29C2361C29E0A300B8A69D /* Frameworks */,
+				4F29C2391C29E0A300B8A69D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fsvolume;
+			productName = alert;
+			productReference = 4F29C23D1C29E0A300B8A69D /* libfsvolume.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		4F4CB3871B737953000EA9B6 /* crash */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F4CB38E1B737953000EA9B6 /* Build configuration list for PBXNativeTarget "crash" */;
@@ -3138,6 +3446,23 @@
 			name = image;
 			productName = alert;
 			productReference = 4F4CB4501B73B09C000EA9B6 /* libimage.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		4F5134541C2F315C00EFD6D4 /* chooser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F51345B1C2F315C00EFD6D4 /* Build configuration list for PBXNativeTarget "chooser" */;
+			buildPhases = (
+				4F5134551C2F315C00EFD6D4 /* Sources */,
+				4F5134571C2F315C00EFD6D4 /* Frameworks */,
+				4F51345A1C2F315C00EFD6D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chooser;
+			productName = alert;
+			productReference = 4F51345E1C2F315C00EFD6D4 /* libchooser.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		4F6B3E9E1B73D6D300B2A4DE /* json */ = {
@@ -3825,26 +4150,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9445CA3C19083251002568BB /* Build configuration list for PBXNativeTarget "Hammerspoon" */;
 			buildPhases = (
+				FED67435A38ED7D6E749E078 /* Check Pods Manifest.lock */,
 				4F251E7F1A49D5BE00AB6103 /* Prepare defines header file */,
 				4FC09F7A19F99E48007542A6 /* Compile docs.json */,
-				28F84E8DEB615EBE33ED1722 /* Check Pods Manifest.lock */,
 				9445CA0719083251002568BB /* Sources */,
 				9445CA0819083251002568BB /* Frameworks */,
 				4FA81F271B3F2A52000B5537 /* Copy LuaSkin.framework to build/bundle */,
 				4FBE2D161B7268DF00407788 /* Copy extensions to bundle */,
 				9445CA0919083251002568BB /* Resources */,
-				F4A885EE712ED3648ADD36A8 /* Copy Pods Resources */,
+				28214DD7BE224FB559F8906F /* Copy Pods Resources */,
+				4402C316B00FDAA289EE3AF2 /* Embed Pods Frameworks */,
 				4F1CF8D91A47F583001C8AE7 /* Upload binary to Crashlytics */,
 				4F7DB3571A5C513F00C22B03 /* Sign app/frameworks */,
+				4F6689E61C288FF800E48AF1 /* Assert no stray init.lua's in app bundle */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D6FD56921C04230200BAE238 /* PBXTargetDependency */,
-				4F9797C71BED0B5000719F3F /* PBXTargetDependency */,
-				D642089A1BE3CE1F00673724 /* PBXTargetDependency */,
-				D675906D1BDF12DA00EE9F75 /* PBXTargetDependency */,
-				D675906F1BDF12DA00EE9F75 /* PBXTargetDependency */,
 				D64B03491BA955180006C468 /* PBXTargetDependency */,
 				D64125681BA07D35000FB5F8 /* PBXTargetDependency */,
 				4FD0ABC61B74AFD700A82496 /* PBXTargetDependency */,
@@ -3855,6 +4177,10 @@
 				4FD0AB5D1B749D9100A82496 /* PBXTargetDependency */,
 				4FD0AB481B749CA200A82496 /* PBXTargetDependency */,
 				4FD0AB361B74869600A82496 /* PBXTargetDependency */,
+				4F9797C71BED0B5000719F3F /* PBXTargetDependency */,
+				D675906F1BDF12DA00EE9F75 /* PBXTargetDependency */,
+				D6BB4FCC1C16965C000DC0A2 /* PBXTargetDependency */,
+				D6BB4FCA1C16965C000DC0A2 /* PBXTargetDependency */,
 				4FD0AB1F1B74852B00A82496 /* PBXTargetDependency */,
 				4F6B3F841B73F4A500B2A4DE /* PBXTargetDependency */,
 				4F6B3F6C1B73F11800B2A4DE /* PBXTargetDependency */,
@@ -3869,6 +4195,7 @@
 				4F6B3EC51B73DCC900B2A4DE /* PBXTargetDependency */,
 				4F7694561B74C98A00536DE4 /* PBXTargetDependency */,
 				4F6B3EAA1B73D70100B2A4DE /* PBXTargetDependency */,
+				D642089A1BE3CE1F00673724 /* PBXTargetDependency */,
 				4FD0AC041B74BA4100A82496 /* PBXTargetDependency */,
 				4FD0AC161B74BD1300A82496 /* PBXTargetDependency */,
 				4F4CB4521B73B0B5000EA9B6 /* PBXTargetDependency */,
@@ -3878,12 +4205,16 @@
 				4F4CB41D1B73AC56000EA9B6 /* PBXTargetDependency */,
 				4F4CB40C1B73A7A4000EA9B6 /* PBXTargetDependency */,
 				4F4CB3FA1B73A52D000EA9B6 /* PBXTargetDependency */,
+				4F29C2411C29E13500B8A69D /* PBXTargetDependency */,
 				4F4CB3CE1B738FBC000EA9B6 /* PBXTargetDependency */,
 				4FD0ABF11B74B3CE00A82496 /* PBXTargetDependency */,
 				4FD0ABF31B74B3CE00A82496 /* PBXTargetDependency */,
+				D675906D1BDF12DA00EE9F75 /* PBXTargetDependency */,
 				4F4CB3B91B738785000EA9B6 /* PBXTargetDependency */,
 				4F4CB3AC1B7386B5000EA9B6 /* PBXTargetDependency */,
 				4F4CB3981B737A7C000EA9B6 /* PBXTargetDependency */,
+				D6FD56921C04230200BAE238 /* PBXTargetDependency */,
+				4F5134621C2F31A000EFD6D4 /* PBXTargetDependency */,
 				4FDE05F61B73501800E9E8EE /* PBXTargetDependency */,
 				4FDE05F41B73501400E9E8EE /* PBXTargetDependency */,
 				4FDE05D11B72C2FD00E9E8EE /* PBXTargetDependency */,
@@ -3971,6 +4302,40 @@
 			productReference = D64B03461BA954780006C468 /* libwebviewusercontent.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		D6BB4FAE1C16959C000DC0A2 /* speech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BB4FB61C16959C000DC0A2 /* Build configuration list for PBXNativeTarget "speech" */;
+			buildPhases = (
+				D6BB4FAF1C16959C000DC0A2 /* Sources */,
+				D6BB4FB11C16959C000DC0A2 /* Frameworks */,
+				D6BB4FB51C16959C000DC0A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = speech;
+			productName = alert;
+			productReference = D6BB4FB91C16959C000DC0A2 /* libspeech.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		D6BB4FBB1C1695EC000DC0A2 /* speechlistener */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6BB4FC41C1695EC000DC0A2 /* Build configuration list for PBXNativeTarget "speechlistener" */;
+			buildPhases = (
+				D6BB4FBC1C1695EC000DC0A2 /* Sources */,
+				D6BB4FBE1C1695EC000DC0A2 /* Frameworks */,
+				D6BB4FC31C1695EC000DC0A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = speechlistener;
+			productName = alert;
+			productReference = D6BB4FC71C1695EC000DC0A2 /* libspeechlistener.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		D6F310D41BDF0E1700045CCD /* drawing_color */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6F310DD1BDF0E1700045CCD /* Build configuration list for PBXNativeTarget "drawing_color" */;
@@ -4032,6 +4397,10 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Hammerspoon;
 				TargetAttributes = {
+					4F20B5281C1F1C5B00F52437 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9445CA0A19083251002568BB;
+					};
 					4F9850E01B722C8100F7E909 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -4059,6 +4428,7 @@
 			targets = (
 				9445CA0A19083251002568BB /* Hammerspoon */,
 				D02F95231A00221C00E28BB2 /* Hammerspoon Tests */,
+				4F20B5281C1F1C5B00F52437 /* Hammerspoon UI Tests */,
 				4F9850E01B722C8100F7E909 /* alert */,
 				4FBE2CD81B72541B00407788 /* applescript */,
 				4FBE2CEF1B7261A200407788 /* application */,
@@ -4071,6 +4441,7 @@
 				4FDE05BD1B72C22500E9E8EE /* brightness */,
 				4FDE05D21B734EA600E9E8EE /* caffeinate */,
 				4FDE05E31B734EE600E9E8EE /* caffeinatewatcher */,
+				4F5134541C2F315C00EFD6D4 /* chooser */,
 				D6FD56851C0422B400BAE238 /* console */,
 				4F4CB3871B737953000EA9B6 /* crash */,
 				4F4CB39C1B7385C5000EA9B6 /* dockicon */,
@@ -4079,6 +4450,7 @@
 				4FD0ABCD1B74B2C500A82496 /* eventtap */,
 				4FD0ABD81B74B2FA00A82496 /* eventtapevent */,
 				4F4CB3C21B738F1E000EA9B6 /* fs */,
+				4F29C2331C29E0A300B8A69D /* fsvolume */,
 				4F4CB3E91B73A3A1000EA9B6 /* hash */,
 				4F4CB3FB1B73A746000EA9B6 /* hints */,
 				4F4CB40D1B73AC1D000EA9B6 /* host */,
@@ -4103,6 +4475,8 @@
 				4F6B3F601B73F0E300B2A4DE /* settings */,
 				4F6B3F711B73F44500B2A4DE /* sound */,
 				4FD0AB141B7484D700A82496 /* spaceswatcher */,
+				D6BB4FAE1C16959C000DC0A2 /* speech */,
+				D6BB4FBB1C1695EC000DC0A2 /* speechlistener */,
 				D6F310E51BDF110500045CCD /* styledtext */,
 				4F9797B91BED0AC800719F3F /* task */,
 				4FD0AB2A1B74867600A82496 /* timer */,
@@ -4120,16 +4494,30 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F20B5271C1F1C5B00F52437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F20B5341C1F225300F52437 /* init.lua in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9445CA0919083251002568BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDE05F91B7370E100E9E8EE /* hammerspoon.h in Resources */,
+				4F766E641C48F7BE007B9D24 /* gensql in Resources */,
+				4F766E5C1C48F79C007B9D24 /* release.sh in Resources */,
+				4F766E611C48F7BE007B9D24 /* gencomments in Resources */,
+				4F766E5A1C48F79C007B9D24 /* copy_extensions_to_bundle.sh in Resources */,
 				4FC09F7C19F99ECE007542A6 /* docs.json in Resources */,
+				4F766E5B1C48F79C007B9D24 /* librelease.sh in Resources */,
+				4F766E631C48F7BE007B9D24 /* genjson in Resources */,
 				4F8E84311B90EDBF00C25955 /* statusicon.pdf in Resources */,
 				944A2D451989737E00D8DC90 /* Images.xcassets in Resources */,
 				944A2D431989737E00D8DC90 /* Credits.rtf in Resources */,
 				944A2D3A1989735300D8DC90 /* MainMenu.xib in Resources */,
+				4F766E621C48F7BE007B9D24 /* genhtml in Resources */,
 				949CDC001990759B00906CCE /* ConsoleWindow.xib in Resources */,
 				949CDBFE1990747B00906CCE /* PreferencesWindow.xib in Resources */,
 				945B65B2198D31FC002D2E30 /* setup.lua in Resources */,
@@ -4147,19 +4535,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28F84E8DEB615EBE33ED1722 /* Check Pods Manifest.lock */ = {
+		28214DD7BE224FB559F8906F /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4402C316B00FDAA289EE3AF2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F1CF8D91A47F583001C8AE7 /* Upload binary to Crashlytics */ = {
@@ -4190,6 +4593,20 @@
 			shellPath = /bin/sh;
 			shellScript = "set -eux\n\nif [ -f ../token-crashlytics ] ; then\n  source ../token-crashlytics\n  > Hammerspoon/secrets.h\n  echo \"#define CRASHLYTICS_API_KEY \\\"${CRASHLYTICS_API_KEY}\\\"\" >>Hammerspoon/secrets.h\nelse\n  > Hammerspoon/secrets.h\nfi";
 		};
+		4F6689E61C288FF800E48AF1 /* Assert no stray init.lua's in app bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Assert no stray init.lua's in app bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/init.lua\" ]; then\n  echo \"ERROR: At least one extension's init.lua has membership of the Hammerspoon.app target. While non-fatal, this should not be the case. Here is the first line of said init.lua file, which might help you find out which extension is at fault. Once you know, in Xcode, select View -> Utilities -> Show File Inspector and untick the file from the Hammerspoon target:\"\n  echo -n \"    \"\n  head -1 \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/init.lua\"\n  exit 1\nfi\n\nexit 0";
+		};
 		4F7DB3571A5C513F00C22B03 /* Sign app/frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4202,7 +4619,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eux\n\nif [ -f ../token-codesign ] ; then\n    echo \"SIGNING CODE\"\n    source ../token-codesign\n\n    if [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n        CODESIGN_OPTS=\"--timestamp=none\"\n    else\n        CODESIGN_OPTS=\"\"\n    fi\n\n    LOCATION=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    if [ -e \"${LOCATION}/Sparkle.framework/Versions/A\" ] ; then\ncodesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${LOCATION}/Sparkle.framework/Versions/A\"\n    fi\n    codesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${LOCATION}/LuaSkin.framework/Versions/A\"\n    codesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\"\nelse\n    echo \"SKIPPING CODE SIGNING\"\nfi";
+			shellScript = "set -eux\n\nif [ -f ../token-codesign ] ; then\n    echo \"SIGNING CODE\"\n    source ../token-codesign\n\n    if [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n        CODESIGN_OPTS=\"--timestamp=none\"\n    else\n        CODESIGN_OPTS=\"\"\n    fi\n\n    LOCATION=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\n    # sign Sparkle.framework if this is a release build\n    if [ -e \"${LOCATION}/Sparkle.framework/Versions/A\" ] ; then\n        codesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${LOCATION}/Sparkle.framework/Versions/A\"\n    fi\n\n    # sign LuaSkin.framework\n    codesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${LOCATION}/LuaSkin.framework/Versions/A\"\n    # sign the Hammerspoon binary\n    codesign ${CODESIGN_OPTS} --verbose --force --sign \"$CODESIGN_IDENTITY\" \"${CODESIGNING_FOLDER_PATH}\"\nelse\n    echo \"SKIPPING CODE SIGNING\"\nfi";
 		};
 		4FA81F271B3F2A52000B5537 /* Copy LuaSkin.framework to build/bundle */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4230,7 +4647,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eux\n\nexport HS_DST=\"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/extensions/hs\"\nexport HS_MODULES=\"alert applescript application audiodevice base64 battery brightness caffeinate console crash dockicon drawing eventtap fs hash hints host hotkey http httpserver image ipc javascript json keycodes location menubar milight mouse notify pasteboard pathwatcher screen settings sound styledtext task timer uielement urlevent usb webview wifi window\"\nexport HS_WATCHERS=\"application audiodevice battery caffeinate screen spaces usb wifi\"\nexport HS_LUAONLY=\"appfinder expose fnutils geometry grid inspect itunes layout logger messages mjomatic spotify spaces tabs utf8 doc\"\n\n# First, copy all of our init.lua's into the destination bundle\nfor hs_lua in ${HS_LUAONLY} ${HS_MODULES} ; do\n  mkdir -pv \"${HS_DST}/${hs_lua}\"\n  cp -av \"${SRCROOT}/extensions/${hs_lua}/init.lua\" \"${HS_DST}/${hs_lua}/init.lua\"\ndone\n\n# Now, copy all of our internal.so's\nfor hs_module in ${HS_MODULES} ; do\n  mkdir -pv \"${HS_DST}/${hs_module}\"\n  cp -av \"${BUILT_PRODUCTS_DIR}/lib${hs_module}.dylib\" \"${HS_DST}/${hs_module}/internal.so\"\ndone\n\n# Now, copy our watcher.so's\nfor hs_watcher in ${HS_WATCHERS} ; do\n  mkdir -pv \"${HS_DST}/${hs_watcher}\"\n  cp -av \"${BUILT_PRODUCTS_DIR}/lib${hs_watcher}watcher.dylib\" \"${HS_DST}/${hs_watcher}/watcher.so\"\ndone\n\n# Special copier for hs.doc\ncp -av \"${SRCROOT}/extensions/doc/lua.json\" \"${HS_DST}/doc/lua.json\"\n\n# Special copier for hs.eventtap.event\ncp -av \"${BUILT_PRODUCTS_DIR}/libeventtapevent.dylib\" \"${HS_DST}/eventtap/event.so\"\n\n# Special copier for hs.drawing.color\nmkdir -pv \"${HS_DST}/drawing/color\"\ncp -av \"${SRCROOT}/extensions/drawing/color/init.lua\" \"${HS_DST}/drawing/color/init.lua\"\ncp -av \"${BUILT_PRODUCTS_DIR}/libdrawing_color.dylib\" \"${HS_DST}/drawing/color/internal.so\"\n\n# Special copier for hs.ipc\nmkdir -pv \"${HS_DST}/ipc/bin\"\nmkdir -pv \"${HS_DST}/ipc/share/man/man1\"\ncp -av \"${SRCROOT}/extensions/ipc/cli/hs.man\" \"${HS_DST}/ipc/share/man/man1/hs.1\"\ncp -av \"${BUILT_PRODUCTS_DIR}/hs\" \"${HS_DST}/ipc/bin/hs\"\n\n# Special copier for hs.window submodules\ncp -av \"${SRCROOT}/extensions/window/filter.lua\" \"${HS_DST}/window/filter.lua\"\ncp -av \"${SRCROOT}/extensions/window/layout.lua\" \"${HS_DST}/window/layout.lua\"\ncp -av \"${SRCROOT}/extensions/window/tiling.lua\" \"${HS_DST}/window/tiling.lua\"\n\n# Special copier for hs.webview.usercontent submodule\ncp -av \"${BUILT_PRODUCTS_DIR}/libwebviewusercontent.dylib\" \"${HS_DST}/webview/usercontent.so\"\n";
+			shellScript = "set -eux\n${SRCROOT}/scripts/copy_extensions_to_bundle.sh";
 		};
 		4FC09F7A19F99E48007542A6 /* Compile docs.json */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4260,24 +4677,40 @@
 			shellPath = /bin/sh;
 			shellScript = "set -eux\n\nif [ ! -e \"${SRCROOT}/extensions/httpserver/HammerspoonCertTemplate.h\" ]; then\n  pushd \"${SRCROOT}/extensions/httpserver/\"\n  ./mkCertTemplate.sh\n  popd\nfi";
 		};
-		F4A885EE712ED3648ADD36A8 /* Copy Pods Resources */ = {
+		FED67435A38ED7D6E749E078 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hammerspoon/Pods-Hammerspoon-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F20B5251C1F1C5B00F52437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F20B52C1C1F1C5B00F52437 /* Hammerspoon_UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F29C2341C29E0A300B8A69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F29C23E1C29E0E700B8A69D /* volume.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F4CB3881B737953000EA9B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4355,6 +4788,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4CB4561B73B0D5000EA9B6 /* internal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F5134551C2F315C00EFD6D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3D9D081C3314570082E864 /* HSChooserWindow.m in Sources */,
+				4F3D9D041C3302CB0082E864 /* HSChooser.m in Sources */,
+				4F3D9D0C1C34773E0082E864 /* HSChooserTableView.m in Sources */,
+				4F0676081C32C0B30088C57C /* HSChooserCell.m in Sources */,
+				4F51345F1C2F317800EFD6D4 /* internal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4733,6 +5178,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6BB4FAF1C16959C000DC0A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6BB4FBA1C1695BF000DC0A2 /* internal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6BB4FBC1C1695EC000DC0A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6BB4FC81C169605000DC0A2 /* listener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6F310D51BDF0E1700045CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4760,6 +5221,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4F20B52F1C1F1C5B00F52437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9445CA0A19083251002568BB /* Hammerspoon */;
+			targetProxy = 4F20B52E1C1F1C5B00F52437 /* PBXContainerItemProxy */;
+		};
+		4F29C2411C29E13500B8A69D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F29C2331C29E0A300B8A69D /* fsvolume */;
+			targetProxy = 4F29C2401C29E13500B8A69D /* PBXContainerItemProxy */;
+		};
 		4F4CB3981B737A7C000EA9B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F4CB3871B737953000EA9B6 /* crash */;
@@ -4809,6 +5280,11 @@
 			isa = PBXTargetDependency;
 			target = 4F4CB4461B73B09C000EA9B6 /* image */;
 			targetProxy = 4F4CB4511B73B0B5000EA9B6 /* PBXContainerItemProxy */;
+		};
+		4F5134621C2F31A000EFD6D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F5134541C2F315C00EFD6D4 /* chooser */;
+			targetProxy = 4F5134611C2F31A000EFD6D4 /* PBXContainerItemProxy */;
 		};
 		4F6B3EAA1B73D70100B2A4DE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -5040,6 +5516,16 @@
 			target = D6F310E51BDF110500045CCD /* styledtext */;
 			targetProxy = D675906E1BDF12DA00EE9F75 /* PBXContainerItemProxy */;
 		};
+		D6BB4FCA1C16965C000DC0A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6BB4FAE1C16959C000DC0A2 /* speech */;
+			targetProxy = D6BB4FC91C16965C000DC0A2 /* PBXContainerItemProxy */;
+		};
+		D6BB4FCC1C16965C000DC0A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6BB4FBB1C1695EC000DC0A2 /* speechlistener */;
+			targetProxy = D6BB4FCB1C16965C000DC0A2 /* PBXContainerItemProxy */;
+		};
 		D6FD56921C04230200BAE238 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D6FD56851C0422B400BAE238 /* console */;
@@ -5048,10 +5534,196 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4F20B5311C1F1C5B00F52437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = HammerspoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.hammerspoon.HammerspoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hammerspoon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4F20B5321C1F1C5B00F52437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = HammerspoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.hammerspoon.HammerspoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Hammerspoon;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		4F29C23B1C29E0A300B8A69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		4F29C23C1C29E0A300B8A69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
 		4F4CB38F1B737953000EA9B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5120,6 +5792,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5186,6 +5859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5254,6 +5928,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5320,6 +5995,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5388,6 +6064,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5454,6 +6131,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5522,6 +6200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5588,6 +6267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5656,6 +6336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5722,6 +6403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5790,6 +6472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5856,6 +6539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5924,6 +6608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -5990,6 +6675,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6058,6 +6744,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6124,6 +6811,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6192,6 +6880,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6258,6 +6947,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6327,6 +7017,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6390,10 +7081,155 @@
 			};
 			name = Release;
 		};
+		4F51345C1C2F315C00EFD6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		4F51345D1C2F315C00EFD6D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
 		4F6B3EA61B73D6D300B2A4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6462,6 +7298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6528,6 +7365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6596,6 +7434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6662,6 +7501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6730,6 +7570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6796,6 +7637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6864,6 +7706,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6930,6 +7773,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -6998,6 +7842,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7064,6 +7909,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7132,6 +7978,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7198,6 +8045,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7266,6 +8114,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7332,6 +8181,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7400,6 +8250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7466,6 +8317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7534,6 +8386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7600,6 +8453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7668,6 +8522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7734,6 +8589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7802,6 +8658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7868,6 +8725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -7936,6 +8794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8002,6 +8861,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8074,6 +8934,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8144,6 +9005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8212,6 +9074,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8278,6 +9141,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8350,6 +9214,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8420,6 +9285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8488,6 +9354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8554,6 +9421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8622,6 +9490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8688,6 +9557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8756,6 +9626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8822,6 +9693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8890,6 +9762,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -8956,6 +9829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9024,6 +9898,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9090,6 +9965,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9162,6 +10038,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9232,6 +10109,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9304,6 +10182,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9374,6 +10253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9446,6 +10326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9516,6 +10397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9588,6 +10470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9658,6 +10541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9730,6 +10614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9800,6 +10685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9872,6 +10758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -9942,6 +10829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10014,6 +10902,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10084,6 +10973,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10152,6 +11042,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10218,6 +11109,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10290,6 +11182,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10360,6 +11253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10432,6 +11326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10502,6 +11397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10574,6 +11470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10644,6 +11541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10716,6 +11614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10786,6 +11685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10858,6 +11758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -10928,6 +11829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -10943,6 +11845,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -10956,6 +11859,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11029,6 +11933,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11100,6 +12005,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11168,6 +12074,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11234,6 +12141,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11302,6 +12210,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11368,6 +12277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11436,6 +12346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11502,6 +12413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11574,6 +12486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11644,6 +12557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11712,6 +12626,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -11860,9 +12775,10 @@
 		};
 		9445CA3D19083251002568BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A72912922777E1D082D08222 /* Pods-Hammerspoon.debug.xcconfig */;
+			baseConfigurationReference = 1A11170BCF0BA210FA17BF37 /* Pods-Hammerspoon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -11874,7 +12790,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hammerspoon/Hammerspoon-Prefix.pch";
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hammerspoon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Hammerspoon;
@@ -11887,9 +12803,10 @@
 		};
 		9445CA3E19083251002568BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 896F5840119EB0EC98527200 /* Pods-Hammerspoon.release.xcconfig */;
+			baseConfigurationReference = 19B5A52CAF8760B10C86C2D0 /* Pods-Hammerspoon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -11897,12 +12814,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Pods/Sparkle",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hammerspoon/Hammerspoon-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hammerspoon.${PRODUCT_NAME:rfc1034identifier}";
@@ -11964,6 +12882,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12032,6 +12951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12098,6 +13018,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12166,6 +13087,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12229,6 +13151,142 @@
 			name = Release;
 		};
 		D64B03441BA954780006C468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		D64B03451BA954780006C468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		D6BB4FB71C16959C000DC0A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
@@ -12296,7 +13354,141 @@
 			};
 			name = Debug;
 		};
-		D64B03451BA954780006C468 /* Release */ = {
+		D6BB4FB81C16959C000DC0A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		D6BB4FC51C1695EC000DC0A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		D6BB4FC61C1695EC000DC0A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
@@ -12366,6 +13558,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12434,6 +13627,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12500,6 +13694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12568,6 +13763,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12634,6 +13830,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12702,6 +13899,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
@@ -12767,6 +13965,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F20B5301C1F1C5B00F52437 /* Build configuration list for PBXNativeTarget "Hammerspoon UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F20B5311C1F1C5B00F52437 /* Debug */,
+				4F20B5321C1F1C5B00F52437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4F29C23A1C29E0A300B8A69D /* Build configuration list for PBXNativeTarget "fsvolume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F29C23B1C29E0A300B8A69D /* Debug */,
+				4F29C23C1C29E0A300B8A69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		4F4CB38E1B737953000EA9B6 /* Build configuration list for PBXNativeTarget "crash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -12853,6 +14069,15 @@
 			buildConfigurations = (
 				4F4CB44E1B73B09C000EA9B6 /* Debug */,
 				4F4CB44F1B73B09C000EA9B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4F51345B1C2F315C00EFD6D4 /* Build configuration list for PBXNativeTarget "chooser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F51345C1C2F315C00EFD6D4 /* Debug */,
+				4F51345D1C2F315C00EFD6D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -13267,6 +14492,24 @@
 			buildConfigurations = (
 				D64B03441BA954780006C468 /* Debug */,
 				D64B03451BA954780006C468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6BB4FB61C16959C000DC0A2 /* Build configuration list for PBXNativeTarget "speech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6BB4FB71C16959C000DC0A2 /* Debug */,
+				D6BB4FB81C16959C000DC0A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6BB4FC41C1695EC000DC0A2 /* Build configuration list for PBXNativeTarget "speechlistener" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6BB4FC51C1695EC000DC0A2 /* Debug */,
+				D6BB4FC61C1695EC000DC0A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

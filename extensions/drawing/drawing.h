@@ -1,7 +1,6 @@
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
 #import <LuaSkin/LuaSkin.h>
-#import "../hammerspoon.h"
 
 // Declare our Lua userdata object and a storage container for them
 typedef struct _drawing_t {
@@ -35,9 +34,7 @@ typedef struct _drawing_t {
 @interface HSDrawingViewCircle : HSDrawingView
 @end
 
-@interface HSDrawingViewArc : HSDrawingView
-@property NSPoint center;
-@property CGFloat radius;
+@interface HSDrawingViewEllipticalArc : HSDrawingView
 @property CGFloat startAngle;
 @property CGFloat endAngle;
 @end

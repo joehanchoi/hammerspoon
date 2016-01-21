@@ -2,11 +2,9 @@
 #import <Carbon/Carbon.h>
 #import <LuaSkin/LuaSkin.h>
 #import <CoreLocation/CoreLocation.h>
-#import "../hammerspoon.h"
 
 @interface HSLocation : NSObject<CLLocationManagerDelegate>
 @property (strong, atomic) CLLocationManager* manager;
-@property lua_State* L;
 @end
 
 static HSLocation *location;
@@ -17,13 +15,12 @@ static NSMutableIndexSet *locationHandlers;
 - (id)initWithLua:(lua_State* ) L {
     if (self = [super init]) {
         self.manager = [[CLLocationManager alloc] init];
-        self.L = L;
     }
     return self;
 }
 
 - (void)locationManager:(CLLocationManager *)__unused manager didUpdateLocations:(NSArray *)__unused locations {
-//    CLS_NSLOG(@"hs.location:didUpdateLocations %@", [[locations lastObject] description]);
+//    NSLog(@"hs.location:didUpdateLocations %@", [[locations lastObject] description]);
     LuaSkin *skin = [LuaSkin shared];
     lua_State *L = skin.L;
 
@@ -33,18 +30,19 @@ static NSMutableIndexSet *locationHandlers;
 
     if (![skin protectedCallAndTraceback:0 nresults:0]) {
         const char *errorMsg = lua_tostring(L, -1);
-        CLS_NSLOG(@"%s", errorMsg);
-        showError(L, (char *)errorMsg);
+        [skin logError:[NSString stringWithFormat:@"hs.location.register() callback error: %s", errorMsg]];
     }
 
     return;
 }
 
 - (void)locationManager:(CLLocationManager *)__unused manager didFailWithError:(NSError *)error {
-        CLS_NSLOG(@"hs.location didFailWithError: %@", error);
+    LuaSkin *skin = [LuaSkin shared];
+    [skin logBreadcrumb:[NSString stringWithFormat:@"hs.location didFailWithError: %@", error]];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    LuaSkin *skin = [LuaSkin shared];
     NSString *msg;
     switch (status) {
         case kCLAuthorizationStatusAuthorized:
@@ -68,19 +66,20 @@ static NSMutableIndexSet *locationHandlers;
             msg = @"state unknown";
             break;
     }
-    CLS_NSLOG(@"hs.location didChangeAuthorizationStatus authorization %@", msg);
+    [skin logBreadcrumb:[NSString stringWithFormat:@"hs.location didChangeAuthorizationStatus authorization %@", msg]];
 }
 
 @end
 
 BOOL manager_create(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
     if (!location) {
         location = [[HSLocation alloc] initWithLua: L];
         location.manager.purpose = @"Hammerspoon location extension";
         [location.manager setDelegate:location];
 
         if (![CLLocationManager locationServicesEnabled]) {
-            showError(L, "ERROR: Location Services are disabled");
+            [skin logError:@"hs.location: Location Services are disabled by the OS. Check your settings"];
             return false;
         }
 
@@ -146,14 +145,15 @@ static int location_stop_watching(lua_State* L __unused) {
 ///  * There is a small lag between calling hs.location.start() and this function returning useful data, and it may never return data if the user has denied access to Location Services.
 ///  * Rather than poll this function in a loop, consider using hs.timer.doAfter() to continue your work after a reasonable delay.
 static int location_get_location(lua_State* L) {
+    LuaSkin *skin = [LuaSkin shared];
     CLLocation *current = [location.manager location];
     if (!current) {
-        CLS_NSLOG(@"hs.location.get(): No data yet, returning nil");
+        [skin logBreadcrumb:@"hs.location.get(): No data yet, returning nil"];
         lua_pushnil(L);
         return 1;
     }
 
-    CLS_NSLOG(@"hs.location.get(): %@", current.description);
+    [skin logBreadcrumb:[NSString stringWithFormat:@"hs.location.get(): %@", current.description]];
     lua_newtable(L);
 
     lua_pushstring(L, "latitude");

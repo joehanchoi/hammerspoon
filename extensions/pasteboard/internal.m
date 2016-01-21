@@ -56,11 +56,18 @@ static int pasteboard_getImageContents(lua_State* L) {
 /// Returns:
 ///  * True if the operation succeeded, otherwise false
 static int pasteboard_setContents(lua_State* L) {
-    NSString* str = [NSString stringWithUTF8String:luaL_checkstring(L, 1)];
+//     NSString* str = [NSString stringWithUTF8String:luaL_checkstring(L, 1)];
     NSPasteboard* thePasteboard = lua_to_pasteboard(L, 2);
 
+    luaL_tolstring(L, 1, NULL) ;
+    id str = [[LuaSkin shared] toNSObjectAtIndex:-1 withOptions:LS_NSPreserveLuaStringExactly] ;
     [thePasteboard clearContents];
-    BOOL result = [thePasteboard setString:str forType:NSPasteboardTypeString];
+    BOOL result = NO ;
+    if ([str isKindOfClass:[NSString class]]) {
+        result = [thePasteboard setString:str forType:NSPasteboardTypeString];
+    } else {
+        result = [thePasteboard setData:str forType:NSPasteboardTypeString];
+    }
 
     lua_pushboolean(L, result);
     return 1;
@@ -77,6 +84,7 @@ static int pasteboard_setContents(lua_State* L) {
 /// Returns:
 ///  * True if the operation succeeded, otherwise false
 static int pasteboard_setImageContents(lua_State* L) {
+    [[LuaSkin shared] checkArgs:LS_TUSERDATA, "hs.image", LS_TSTRING | LS_TOPTIONAL, LS_TBREAK] ;
     NSImage*  theImage = [[LuaSkin shared] luaObjectAtIndex:1 toClass:"NSImage"] ;
     NSPasteboard* thePasteboard = lua_to_pasteboard(L, 2);
 

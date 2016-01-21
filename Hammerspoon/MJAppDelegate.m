@@ -40,6 +40,8 @@ static BOOL MJFirstRunForCurrentVersion(void) {
                            andSelector:@selector(handleGetURLEvent:withReplyEvent:)
                          forEventClass:kInternetEventClass andEventID:kAEGetURL];
     self.startupEvent = nil;
+    self.startupFile = nil;
+    self.openFileDelegate = nil;
 }
 
 - (void)handleGetURLEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
@@ -47,8 +49,21 @@ static BOOL MJFirstRunForCurrentVersion(void) {
     self.startupEvent = event;
 }
 
+- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
+    if (!self.openFileDelegate) {
+        self.startupFile = filename;
+    } else {
+        if ([self.openFileDelegate respondsToSelector:@selector(callbackWithURL:)]) {
+            [self.openFileDelegate callbackWithURL:filename];
+        }
+    }
+
+    return YES;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
+    // Remove our early event manager handler so hs.urlevent can register for it later, if the user has it configured to
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
 
     if(NSClassFromString(@"XCTest") != nil) {
@@ -61,10 +76,24 @@ static BOOL MJFirstRunForCurrentVersion(void) {
 
         if (!fsPath) {
             NSLog(@"Unable to find init.lua in Hammerspoon Tests.xctest. We're about to crash, sorry!");
+            abort();
         } else {
             NSLog(@"testing init.lua");
         }
         MJConfigFile = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:fsPath length:strlen(fsPath)];
+    } else if ([[[NSProcessInfo processInfo] environment] objectForKey:@"XCTESTING"]) {
+        NSLog(@"in UI testing mode");
+        NSString *initPath = [[[NSFileManager defaultManager] currentDirectoryPath] stringByAppendingString:@"/HammerspoonUITests-Runner.app/Contents/PlugIns/HammerspoonUITests.xctest/Contents/Resources/init.lua"];
+        const char *fsPath = [initPath fileSystemRepresentation];
+
+        if (!fsPath) {
+            NSLog(@"Unable to find init.lua in Hammerspoon UI Tests. We're about to crash, sorry!");
+            abort();
+        } else {
+            NSLog(@"UI testing init.lua");
+        }
+        MJConfigFile = [[NSFileManager defaultManager] stringWithFileSystemRepresentation:fsPath length:strlen(fsPath)];
+        [self showConsoleWindow:nil];
     } else {
         NSString* userMJConfigFile = [[NSUserDefaults standardUserDefaults] stringForKey:@"MJConfigFile"];
         if (userMJConfigFile) MJConfigFile = userMJConfigFile ;
@@ -87,8 +116,7 @@ static BOOL MJFirstRunForCurrentVersion(void) {
     MJMenuIconSetup(self.menuBarMenu);
     MJDockIconSetup();
     [[MJConsoleWindowController singleton] setup];
-    [LuaSkin shared];
-    MJLuaSetup();
+    MJLuaCreate();
 
     // FIXME: Do we care about showing the prefs on the first run of each new version? (Ng does not care)
     if (MJFirstRunForCurrentVersion() || !MJAccessibilityIsEnabled())
@@ -106,8 +134,7 @@ static BOOL MJFirstRunForCurrentVersion(void) {
 }
 
 - (IBAction) reloadConfig:(id)sender {
-    [[LuaSkin shared] resetLuaState];
-    MJLuaSetup();
+    MJLuaReplace();
 }
 
 - (IBAction) showConsoleWindow:(id)sender {
@@ -126,7 +153,7 @@ static BOOL MJFirstRunForCurrentVersion(void) {
 }
 
 - (IBAction) quitHammerspoon:(id)sender {
-    MJLuaTeardown();
+    MJLuaDeinit();
     [[NSApplication sharedApplication] terminate:nil];
 }
 
